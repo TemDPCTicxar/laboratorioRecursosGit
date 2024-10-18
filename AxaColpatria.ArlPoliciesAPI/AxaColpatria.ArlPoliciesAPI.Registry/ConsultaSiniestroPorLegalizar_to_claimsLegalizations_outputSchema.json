@@ -1,0 +1,61 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "outputType" : "JSON",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "MsgRsHdr" : {
+      "id" : "http://wso2jsonschema.org/MsgRsHdr",
+      "type" : "object",
+      "properties" : {
+        "error" : {
+          "id" : "http://wso2jsonschema.org/MsgRsHdr/error",
+          "type" : "number",
+          "nullable" : "true"
+        }
+      }
+    },
+    "body" : {
+      "id" : "http://wso2jsonschema.org/body",
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "id" : "http://wso2jsonschema.org/body/results",
+          "type" : "array",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/body/results/0",
+            "type" : "object",
+            "properties" : {
+              "Cedula" : {
+                "id" : "http://wso2jsonschema.org/body/results/0/Cedula",
+                "type" : "string",
+                "nullable" : "true"
+              },
+              "FechaAccidente" : {
+                "id" : "http://wso2jsonschema.org/body/results/0/FechaAccidente",
+                "type" : "string",
+                "nullable" : "true"
+              },
+              "NombreEmpleado" : {
+                "id" : "http://wso2jsonschema.org/body/results/0/NombreEmpleado",
+                "type" : "string",
+                "nullable" : "true"
+              },
+              "NroAfiliacion" : {
+                "id" : "http://wso2jsonschema.org/body/results/0/NroAfiliacion",
+                "type" : "number",
+                "nullable" : "true"
+              },
+              "NroSiniestro" : {
+                "id" : "http://wso2jsonschema.org/body/results/0/NroSiniestro",
+                "type" : "number",
+                "nullable" : "true"
+              }
+            }
+          } ]
+        }
+      }
+    }
+  }
+}

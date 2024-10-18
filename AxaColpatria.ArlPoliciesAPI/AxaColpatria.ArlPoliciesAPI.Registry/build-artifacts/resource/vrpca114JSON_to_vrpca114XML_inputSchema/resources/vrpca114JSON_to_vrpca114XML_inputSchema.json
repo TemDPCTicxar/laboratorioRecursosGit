@@ -1,0 +1,174 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "inputType" : "JSON",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "IdServicio" : {
+      "id" : "http://wso2jsonschema.org/IdServicio",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "UsuarioEjecuta" : {
+      "id" : "http://wso2jsonschema.org/UsuarioEjecuta",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "IdSiniestro" : {
+      "id" : "http://wso2jsonschema.org/IdSiniestro",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "IdSecuencia" : {
+      "id" : "http://wso2jsonschema.org/IdSecuencia",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "IdContrato" : {
+      "id" : "http://wso2jsonschema.org/IdContrato",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "FechaSiniestro" : {
+      "id" : "http://wso2jsonschema.org/FechaSiniestro",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "Identificacion" : {
+      "id" : "http://wso2jsonschema.org/Identificacion",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CodigoARP" : {
+      "id" : "http://wso2jsonschema.org/CodigoARP",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "NitARP" : {
+      "id" : "http://wso2jsonschema.org/NitARP",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "EstadoBloqueoSiniestro" : {
+      "id" : "http://wso2jsonschema.org/EstadoBloqueoSiniestro",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "NumeroLote" : {
+      "id" : "http://wso2jsonschema.org/NumeroLote",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CodigoDevolucion" : {
+      "id" : "http://wso2jsonschema.org/CodigoDevolucion",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ObservacionPrimeraLinea" : {
+      "id" : "http://wso2jsonschema.org/ObservacionPrimeraLinea",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ObservacionSegundaLinea" : {
+      "id" : "http://wso2jsonschema.org/ObservacionSegundaLinea",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ObservacionTerceraLinea" : {
+      "id" : "http://wso2jsonschema.org/ObservacionTerceraLinea",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ValorAnterior1" : {
+      "id" : "http://wso2jsonschema.org/ValorAnterior1",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ValorActual1" : {
+      "id" : "http://wso2jsonschema.org/ValorActual1",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ValorAnterior2" : {
+      "id" : "http://wso2jsonschema.org/ValorAnterior2",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ValorActual2" : {
+      "id" : "http://wso2jsonschema.org/ValorActual2",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "EstadoSecuencia" : {
+      "id" : "http://wso2jsonschema.org/EstadoSecuencia",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "FechaRadicado" : {
+      "id" : "http://wso2jsonschema.org/FechaRadicado",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CentroCostoRadicado" : {
+      "id" : "http://wso2jsonschema.org/CentroCostoRadicado",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "TipoPrestacion" : {
+      "id" : "http://wso2jsonschema.org/TipoPrestacion",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "IdRadicadoIdRadicado" : {
+      "id" : "http://wso2jsonschema.org/IdRadicadoIdRadicado",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo1" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo1",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo2" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo2",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo3" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo3",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo4" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo4",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo5" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo5",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo6" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo6",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "CampoFuturo7" : {
+      "id" : "http://wso2jsonschema.org/CampoFuturo7",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ModificacionSiniestroFecha" : {
+      "id" : "http://wso2jsonschema.org/ModificacionSiniestroFecha",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ModificacionSiniestroHora" : {
+      "id" : "http://wso2jsonschema.org/ModificacionSiniestroHora",
+      "type" : "string",
+      "nullable" : "true"
+    }
+  }
+}

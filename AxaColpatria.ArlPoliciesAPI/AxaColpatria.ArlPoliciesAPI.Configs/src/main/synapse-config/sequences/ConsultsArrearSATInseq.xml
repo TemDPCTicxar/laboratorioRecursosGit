@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ConsultsArrearSATInseq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full" separator="[***PAYLOAD RECIBIDO***]"/>
+    <propertyGroup>
+        <property expression="$trp:canal" name="canal" scope="default" type="STRING"/>
+        <property expression="$trp:idCorrelacionConsumidor" name="idCorrelacionConsumidor" scope="default" type="STRING"/>
+        <property expression="$trp:peticionFecha" name="peticionFecha" scope="default" type="STRING"/>
+        <property expression="$trp:usuario" name="usuario" scope="default" type="STRING"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="ConsultsArrearSATEndPoint"/>
+    </call>
+    <log level="full" separator="[***Despues del call Consult Arrear***]"/>
+    <respond/>
+</sequence>

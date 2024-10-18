@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/mockarl" name="MockARL" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="full" separator="[***MOCK API***]"/>
+            <payloadFactory media-type="json">
+                <format>
+                   {
+					    "Message": "La consulta no esta disponible por el momento, por favor intente más tarde"
+					}
+                </format>
+                <args/>
+            </payloadFactory>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

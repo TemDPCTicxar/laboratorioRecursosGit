@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="PatchSpendingPreventionOutSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <propertyGroup>
+        <property expression="json-eval($)" name="As400Resp" scope="default" type="STRING"/>
+        <property expression="fn:substring-after(get-property('MessageID'), 'urn:uuid:')" name="MessageID" scope="default" type="STRING"/>
+    </propertyGroup>
+    <log>
+        <property name="SeqName" value="PatchSpendingPreventionOutSequence"/>
+        <property expression="json-eval($)" name="As400Resp"/>
+        <property expression="string(get-property('axis2', 'HTTP_SC'))" name="StatusCode"/>
+    </log>
+    <switch source="string(get-property('axis2', 'HTTP_SC'))">
+        <case regex="404">
+            <propertyGroup>
+                <property name="ERROR_CODE" scope="default" type="STRING" value="200"/>
+                <property name="ERROR_MESSAGE" scope="default" type="STRING" value="No se encontro el recurso solicitado"/>
+                <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error tecnico"/>
+            </propertyGroup>
+            <sequence key="PatchSpendingPreventionFaultSequence"/>
+        </case>
+        <case regex="400">
+            <propertyGroup>
+                <property name="ERROR_CODE" scope="default" type="STRING" value="200"/>
+                <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Error en la peticion."/>
+                <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error tecnico"/>
+            </propertyGroup>
+            <sequence key="PatchSpendingPreventionFaultSequence"/>
+        </case>
+        <case regex="401">
+            <propertyGroup>
+                <property name="ERROR_CODE" scope="default" type="STRING" value="200"/>
+                <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Nombre de usuario/contraseña inválidos."/>
+                <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error tecnico"/>
+            </propertyGroup>
+            <sequence key="PatchSpendingPreventionFaultSequence"/>
+        </case>
+        <case regex="500">
+            <propertyGroup>
+                <property name="ERROR_CODE" scope="default" type="STRING" value="200"/>
+                <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Error interno del servidor."/>
+                <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error tecnico"/>
+            </propertyGroup>
+            <sequence key="PatchSpendingPreventionFaultSequence"/>
+        </case>
+        <default>
+            <property expression="json-eval($.vrpca129Response.return.PPIEWS.CODRESPUESTA)" name="Codigo" scope="default" type="STRING"/>
+            <filter regex="0" source="$ctx:Codigo">
+                <then>
+                    <payloadFactory media-type="json">
+                        <format>$1</format>
+                        <args>
+                            <arg evaluator="json" expression="$ctx:As400Resp"/>
+                        </args>
+                    </payloadFactory>
+                    <payloadFactory media-type="json" template-type="freemarker">
+                        <format><![CDATA[<#setting locale="en_US">
+						{
+		    "MsgRsHdr": {
+		        "error": null
+		    },
+		    "body":  {
+ "message": "${payload.vrpca129Response.return.PPRMSALWS_SAL.PERROR}",
+ "affiliationnumber": ${payload.vrpca129Response.return.PPRMSALWS_SAL.PNRAFILIAS?c},
+ "percentage": ${payload.vrpca129Response.return.PPRMSALWS_SAL.PPORPREVENS?string["0.00"]}
+    }
+		    }]]></format>
+                        <args>
+                            <arg evaluator="json" expression="$ctx:As400Resp"/>
+                        </args>
+                    </payloadFactory>
+                    <respond/>
+                </then>
+                <else>
+                    <payloadFactory media-type="json">
+                        <format>$1</format>
+                        <args>
+                            <arg evaluator="json" expression="$ctx:As400Resp"/>
+                        </args>
+                    </payloadFactory>
+                    <log level="custom">
+                        <property expression="json-eval($)" name="payloadResp"/>
+                    </log>
+                    <payloadFactory media-type="json" template-type="freemarker">
+                        <format><![CDATA[{
+    "MsgRsHdr": {
+        "error": {
+            "Status": {
+				"StatusCode":200,
+				"Severity": null,
+				"StatusDesc": "La consulta no está disponible por el momento, por favor intente más tarde",
+				"AdditionalStatus": {
+					"ServerStatusCode": "${payload.vrpca129Response.return.PPIEWS.CODRESPUESTA}",
+					"Category": "Error Negocio",
+					"StatusDesc": "${payload.vrpca129Response.return.PPIEWS.MSGLARGO}"
+				}
+            }
+       }
+    },
+    "body": null
+}]]></format>
+                        <args>
+                            <arg evaluator="json" expression="$.body"/>
+                            <arg evaluator="json" expression="$.Header"/>
+                        </args>
+                    </payloadFactory>
+                    <log level="full"/>
+                    <respond/>
+                </else>
+            </filter>
+        </default>
+    </switch>
+</sequence>

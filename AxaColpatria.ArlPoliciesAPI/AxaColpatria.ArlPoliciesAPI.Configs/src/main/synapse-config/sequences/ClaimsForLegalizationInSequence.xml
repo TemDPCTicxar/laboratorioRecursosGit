@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ClaimsForLegalizationInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="DEBUG" level="full" separator="[***IN SEQ***]"/>
+    <propertyGroup>
+        <property expression="get-property('uri.var.affiliationnumber')" name="uri.var.affiliationnumber" scope="default" type="STRING"/>
+        <property name="Content-Type" scope="transport" type="STRING" value="application/json"/>
+        <property name="Accept" scope="transport" type="STRING" value="application/json"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="GetForLegalizationEndpoint"/>
+    </call>
+    <log category="DEBUG" level="full" separator="[***Despues del call  llamado al endpoint***]"/>
+    <filter regex="^(0)$" source="json-eval($.Resultado)">
+        <then>
+            <datamapper config="gov:datamapper/ConsultaSiniestroPorLegalizar_to_claimsLegalizations.dmc" inputSchema="gov:datamapper/ConsultaSiniestroPorLegalizar_to_claimsLegalizations_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/ConsultaSiniestroPorLegalizar_to_claimsLegalizations_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/ConsultaSiniestroPorLegalizar_to_claimsLegalizations_xsltStyleSheet.xml"/>
+            <log category="DEBUG" level="full" separator="[***Despues del datamapper**]"/>
+        </then>
+        <else>
+            <log category="DEBUG" level="full" separator="[***antes de sequenceFault payload**]"/>
+            <payloadFactory media-type="json">
+                <format>{
+	                    "MsgRsHdr": {
+	                        "error": {
+	                            "Status": {
+	                                "StatusCode": 200,
+	                                "Severity": null,
+	                                "StatusDesc": "$3",
+	                                "AdditionalStatus": {
+	                                    "ServerStatusCode": $1,
+	                                    "Severity": null,
+	                                    "Category": "Error Negocio",
+	                                    "StatusDesc": "$3"
+	                                }
+	                            }
+	                       }
+	                    },
+	                    "body": null
+	                }</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+                    <arg evaluator="json" expression="$.Resultado"/>
+                    <arg evaluator="json" expression="$.Mensaje"/>
+                </args>
+            </payloadFactory>
+        </else>
+    </filter>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+    <respond/>
+</sequence>

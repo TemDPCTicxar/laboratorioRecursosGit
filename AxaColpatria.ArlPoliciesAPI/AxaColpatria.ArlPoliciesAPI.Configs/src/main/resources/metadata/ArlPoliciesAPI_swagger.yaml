@@ -1,0 +1,238 @@
+openapi: 3.0.1
+info:
+  title: ArlPoliciesAPI
+  description: API Definition of ArlPoliciesAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/arlpolicies
+paths:
+  /claims/rejectionreasons:
+    get:
+      responses:
+        default:
+          description: Default response
+  /claims/rigths/{idtype}/{documentid}:
+    get:
+      parameters:
+      - name: idtype
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: documentid
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /claims/workaccident/{claimnumber}:
+    get:
+      parameters:
+      - name: claimnumber
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /claims/economiccompensation/{claimnumber}:
+    put:
+      parameters:
+      - name: claimnumber
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /claims/legalizations/{affiliationnumber}:
+    get:
+      parameters:
+      - name: affiliationnumber
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /claims/block:
+    put:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /enrollment:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /invollment:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /healthtransferableemployer:
+    get:
+      responses:
+        default:
+          description: Default response
+  /healthdefaultdebt:
+    get:
+      responses:
+        default:
+          description: Default response
+  /completeenrollments:
+    put:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /customers/arl/{customeridtype}/{customerid}/affiliations:
+    get:
+      parameters:
+      - name: startdate
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: iscompany
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: customeridtype
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: customerid
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: enddate
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /consultaempresatrasladadasat:
+    get:
+      parameters:
+      - name: fechainicio
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: fechafin
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /transferablecompaniessat:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /companies/affiliations:
+    get:
+      responses:
+        default:
+          description: Default response
+  /arrearssat:
+    get:
+      responses:
+        default:
+          description: Default response

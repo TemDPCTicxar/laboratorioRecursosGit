@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="Lista" level="2">
+        <node name="Cedula" schemaDataType="STRING" level="3">
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/Lista/0/Cedula"/>
+          <properties key="type" value="string"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.0/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="FechaAccidente" schemaDataType="STRING" level="3">
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/Lista/0/FechaAccidente"/>
+          <properties key="type" value="string"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.1/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="NombreEmpleado" schemaDataType="STRING" level="3">
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/Lista/0/NombreEmpleado"/>
+          <properties key="type" value="string"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.2/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="NroAfiliacion" schemaDataType="NUMBER" level="3">
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/Lista/0/NroAfiliacion"/>
+          <properties key="type" value="number"/>
+          <outNode>
+            <outgoingLink inNode="//@operators.1/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="NroSiniestro" schemaDataType="NUMBER" level="3">
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/Lista/0/NroSiniestro"/>
+          <properties key="type" value="number"/>
+          <outNode>
+            <outgoingLink inNode="//@operators.2/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <properties key="type" value="array"/>
+        <properties key="id" value="http://wso2jsonschema.org/Lista"/>
+        <properties key="items_id" value="http://wso2jsonschema.org/Lista/0"/>
+        <properties key="items_type" value="object"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{Cedula={id=http://wso2jsonschema.org/Lista/0/Cedula, type=string}, FechaAccidente={id=http://wso2jsonschema.org/Lista/0/FechaAccidente, type=string}, NombreEmpleado={id=http://wso2jsonschema.org/Lista/0/NombreEmpleado, type=string}, NroAfiliacion={id=http://wso2jsonschema.org/Lista/0/NroAfiliacion, type=number}, NroSiniestro={id=http://wso2jsonschema.org/Lista/0/NroSiniestro, type=number}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="Mensaje" schemaDataType="STRING" level="2">
+        <properties key="nullable" value="true"/>
+        <properties key="id" value="http://wso2jsonschema.org/Mensaje"/>
+        <properties key="type" value="string"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="Resultado" schemaDataType="NUMBER" level="2">
+        <properties key="nullable" value="true"/>
+        <properties key="id" value="http://wso2jsonschema.org/Resultado"/>
+        <properties key="type" value="number"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="Trace" schemaDataType="STRING" level="2">
+        <properties key="nullable" value="true"/>
+        <properties key="id" value="http://wso2jsonschema.org/Trace"/>
+        <properties key="type" value="string"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="isDone" schemaDataType="BOOLEAN" level="2">
+        <properties key="nullable" value="true"/>
+        <properties key="id" value="http://wso2jsonschema.org/isDone"/>
+        <properties key="type" value="boolean"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="MsgRsHdr" schemaDataType="OBJECT" level="2">
+        <node name="error" schemaDataType="STRING" level="3">
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/MsgRsHdr/error"/>
+          <properties key="type" value="number"/>
+          <outNode/>
+          <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/MsgRsHdr"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="body" schemaDataType="OBJECT" level="2">
+        <node name="results" level="3">
+          <node name="Cedula" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/results/0/Cedula"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="FechaAccidente" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/results/0/FechaAccidente"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="NombreEmpleado" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/results/0/NombreEmpleado"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="NroAfiliacion" schemaDataType="NUMBER" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/results/0/NroAfiliacion"/>
+            <properties key="type" value="number"/>
+            <outNode/>
+            <inNode incomingLink="//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="NroSiniestro" schemaDataType="NUMBER" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/results/0/NroSiniestro"/>
+            <properties key="type" value="number"/>
+            <outNode/>
+            <inNode incomingLink="//@operators.2/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+          </node>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/body/results"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/body/results/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{Cedula={id=http://wso2jsonschema.org/body/results/0/Cedula, type=string}, FechaAccidente={id=http://wso2jsonschema.org/body/results/0/FechaAccidente, type=string}, NombreEmpleado={id=http://wso2jsonschema.org/body/results/0/NombreEmpleado, type=string}, NroAfiliacion={id=http://wso2jsonschema.org/body/results/0/NroAfiliacion, type=number}, NroSiniestro={id=http://wso2jsonschema.org/body/results/0/NroSiniestro, type=number}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/body"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{error={id=http://wso2jsonschema.org/MsgRsHdr/error, type=string}}"/>
+        <properties key="properties_id" value="{results={id=http://wso2jsonschema.org/body/results, type=array, items=[{id=http://wso2jsonschema.org/body/results/0, type=object, properties={Cedula={id=http://wso2jsonschema.org/body/results/0/Cedula, type=string}, FechaAccidente={id=http://wso2jsonschema.org/body/results/0/FechaAccidente, type=string}, NombreEmpleado={id=http://wso2jsonschema.org/body/results/0/NombreEmpleado, type=string}, NroAfiliacion={id=http://wso2jsonschema.org/body/results/0/NroAfiliacion, type=number}, NroSiniestro={id=http://wso2jsonschema.org/body/results/0/NroSiniestro, type=number}}}]}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="null" type="NUMBER">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:CustomFunction" defaultInputConnectors="2" defaultOutputConnectors="1" operatorType="CUSTOM_FUNCTION" functionName="removeDecimal" functionDefinition="function removeDecimal(inputNumber) {&#xD;&#xA;    // Convertir el número de entrada a una cadena y eliminar el punto decimal&#xD;&#xA;    var stringWithoutDecimal = String(inputNumber).replace('.', '');&#xD;&#xA;    // Convertir la cadena resultante nuevamente a un número entero&#xD;&#xA;    var integerNumber = parseInt(stringWithoutDecimal);&#xD;&#xA;    // Devolver el número entero sin el punto decimal&#xD;&#xA;    return integerNumber;&#xD;&#xA;}">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.3/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+  <operators xsi:type="datamapper:CustomFunction" defaultInputConnectors="2" defaultOutputConnectors="1" operatorType="CUSTOM_FUNCTION" functionName=" removeDecimal2" functionDefinition="function removeDecimal2(inputNumber) {&#xD;&#xA;    // Convertir el número de entrada a una cadena y eliminar el punto decimal&#xD;&#xA;    var stringWithoutDecimal = String(inputNumber).replace('.', '');&#xD;&#xA;    // Convertir la cadena resultante nuevamente a un número entero&#xD;&#xA;    var integerNumber = parseInt(stringWithoutDecimal);&#xD;&#xA;    // Devolver el número entero sin el punto decimal&#xD;&#xA;    return integerNumber;&#xD;&#xA;}">
+    <basicContainer>
+      <leftContainer>
+        <leftConnectors>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
+        </leftConnectors>
+      </leftContainer>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.4/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+</datamapper:DataMapperRoot>

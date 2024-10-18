@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="InvollmentInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full" separator="[**IN SEQ Invollment **]"/>
+    <call>
+        <endpoint key="InvollmentEndpoint"/>
+    </call>
+    <respond/>
+</sequence>

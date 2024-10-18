@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="vrpcc105ResponseXML_To_vrpcc105ResponseJson_outputSchema.json" isCollection="false" path="/_system/governance/datamapper/AxaColpatria.ArlPoliciesAPI.Registry/vrpcc105ResponseXML_To_vrpcc105ResponseJson_outputSchema.json" registryUrl="https://localhost:9443/registry" status="added">
+    <mediaType>application/json</mediaType>
+</resource>

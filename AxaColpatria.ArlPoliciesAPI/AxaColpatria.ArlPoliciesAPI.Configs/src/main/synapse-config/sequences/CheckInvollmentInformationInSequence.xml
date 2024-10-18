@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="CheckInvollmentInformationInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property expression="get-property('uri.var.customeridtype')" name="customeridtype"/>
+        <property expression="get-property('uri.var.customerid')" name="customerid"/>
+        <property expression="get-property('query.param.startdate')" name="startdate"/>
+        <property expression="get-property('query.param.enddate')" name="enddate"/>
+        <property expression="get-property('query.param.iscompany')" name="iscompany"/>
+    </log>
+    <propertyGroup>
+        <property expression="get-property('uri.var.customeridtype')" name="customeridtype" scope="default" type="STRING"/>
+        <property expression="get-property('uri.var.customerid')" name="customerid" scope="default" type="INTEGER"/>
+        <property expression="get-property('query.param.startdate')" name="startdate" scope="default" type="STRING"/>
+        <property expression="get-property('query.param.enddate')" name="enddate" scope="default" type="STRING"/>
+        <property expression="get-property('query.param.iscompany')" name="iscompany" scope="default" type="STRING"/>
+        <property expression="fn:substring('SN', 2 - 1 * boolean(get-property('query.param.iscompany') = 'true'), 1)" name="iscompanyTransformado" scope="default" type="STRING"/>
+    </propertyGroup>
+    <payloadFactory media-type="json">
+        <format>
+                {"tipodocumento": "$1", "numerodocumento": $2, "esempresa": "$3", "fechainiciovigenciacontrato": "$4", "fechafinvigenciacontrato": "$5"}</format>
+        <args>
+            <arg evaluator="xml" expression="$ctx:customeridtype"/>
+            <arg evaluator="xml" expression="$ctx:customerid"/>
+            <arg evaluator="xml" expression="$ctx:iscompanyTransformado"/>
+            <arg evaluator="xml" expression="$ctx:startdate"/>
+            <arg evaluator="xml" expression="$ctx:enddate"/>
+        </args>
+    </payloadFactory>
+    <property expression="json-eval($)" name="jsonPayload" scope="default" type="STRING"/>
+    <property expression="base64Encode($ctx:jsonPayload)" name="encodedPayload" scope="default" type="STRING"/>
+    <log level="full" separator="[***PAYLOAD***]"/>
+    <header expression="$ctx:encodedPayload" name="encode" scope="transport"/>
+    <call>
+        <endpoint key="CheckInvollmentInformationEndPoint"/>
+    </call>
+    <!-- <call>
+        <endpoint>
+            <http method="get" uri-template="http://localhost:8290/mockarl">
+                <suspendOnFailure>
+                    <initialDuration>-1</initialDuration>
+                    <progressionFactor>-1</progressionFactor>
+                    <maximumDuration>0</maximumDuration>
+                </suspendOnFailure>
+                <markForSuspension>
+                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                </markForSuspension>
+            </http>
+        </endpoint>
+    </call>  -->
+    <log level="full">
+        <property expression="json-eval($.Body.existe)" name="existe"/>
+        <property expression="json-eval($.Body.estavigente)" name="estavigente"/>
+        <property expression="json-eval($.Body.clientearlcolpatria)" name="clientearlcolpatria"/>
+        <property expression="json-eval($.MsgRsHdr.error.Status.StatusCode)" name="StatusCode"/>
+    </log>
+    <propertyGroup>
+        <property expression="json-eval($.Body.existe)" name="existe" scope="default" type="STRING"/>
+        <property expression="json-eval($.Body.estavigente)" name="estavigente" scope="default" type="STRING"/>
+        <property expression="json-eval($.Body.clientearlcolpatria)" name="clientearlcolpatria" scope="default" type="STRING"/>
+        <property expression="boolean(get-property('existe') = 'S')" name="existeTransformado" scope="default" type="BOOLEAN"/>
+        <property expression="boolean(get-property('estavigente') = 'S')" name="estavigenteTransformado" scope="default" type="BOOLEAN"/>
+        <property expression="boolean(get-property('clientearlcolpatria') = 'S')" name="clientearlcolpatriaTransformado" scope="default" type="BOOLEAN"/>
+        <property expression="json-eval($.MsgRsHdr.error.Status.StatusCode)" name="StatusCode" scope="default" type="STRING"/>
+    </propertyGroup>
+    <filter xpath="$ctx:StatusCode = '0'">
+        <then>
+            <payloadFactory media-type="json">
+                <format>
+						   {
+							"MsgRsHdr": {
+								"error": null
+							},
+							"body": {
+								"existe": $1,
+								"estavigente": $2,
+								"clientearlcolpatria": $3
+
+							}
+						}			
+					</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('existeTransformado')"/>
+                    <arg evaluator="xml" expression="get-property('estavigenteTransformado')"/>
+                    <arg evaluator="xml" expression="get-property('clientearlcolpatriaTransformado')"/>
+                </args>
+            </payloadFactory>
+            <propertyGroup>
+                <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+            </propertyGroup>
+        </then>
+        <else>
+            <payloadFactory media-type="json">
+                <format>
+			        	{
+					    "MsgRsHdr": {
+					        "error": {
+					            "Status": {
+					                "StatusCode": $1,
+					                "Severity": "error",
+					                "StatusDesc": "$3",
+					                "AdditionalStatus": {
+					                    "ServerStatusCode": $2, 
+					                    "Category": "Error de negocio",
+					                    "StatusDesc": "$4"
+					                }
+					            }
+					        }
+					    },
+					    "body": null
+					}
+
+				</format>
+                <args>
+                    <arg evaluator="json" expression="$.MsgRsHdr.error.Status.StatusCode"/>
+                    <arg evaluator="json" expression="$.MsgRsHdr.error.Status.AdditionalStatus.ServerStatusCode"/>
+                    <arg evaluator="json" expression="$.MsgRsHdr.error.Status.StatusDesc"/>
+                    <arg evaluator="json" expression="$.MsgRsHdr.error.Status.AdditionalStatus.StatusDesc"/>
+                </args>
+            </payloadFactory>
+        </else>
+    </filter>
+    <respond/>
+</sequence>

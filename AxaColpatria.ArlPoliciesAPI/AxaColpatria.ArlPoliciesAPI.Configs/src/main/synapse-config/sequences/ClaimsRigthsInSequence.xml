@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ClaimsRigthsInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="DEBUG" level="full" separator=", [PAYLOAD RECIBIDO]"/>
+    <propertyGroup description="Informacion que afecta al flujo">
+        <property expression="get-property('uri.var.idtype')" name="idtype" scope="default" type="STRING"/>
+        <property expression="get-property('uri.var.documentid')" name="documentid" scope="default" type="STRING"/>
+        <property expression="$trp:FechaAccidente" name="FechaAccidente" scope="default" type="STRING"/>
+        <property expression="$trp:Canal" name="Canal" scope="default" type="STRING"/>
+        <property expression="$trp:IdCorrelacionConsumidor" name="IdCorrelacionConsumidor" scope="default" type="STRING"/>
+        <property expression="$trp:IdTransaccion" name="IdTransaccion" scope="default" type="STRING"/>
+        <property expression="$trp:PeticionFecha" name="PeticionFecha" scope="default" type="STRING"/>
+        <property expression="$trp:Usuario" name="Usuario" scope="default" type="STRING"/>
+        <property expression="concat(substring($ctx:FechaAccidente, 1, 4), '-', substring($ctx:FechaAccidente, 6, 2), '-', substring($ctx:FechaAccidente, 9, 2))" name="FechaAccidenteTransformada" scope="default" type="STRING"/>
+    </propertyGroup>
+    <payloadFactory media-type="xml">
+        <format>
+            <soapenv:Envelope xmlns:con="http://consultardatosafiliacion.wsbeans.iseries/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                <soapenv:Header/>
+                <soapenv:Body>
+                    <ns0:vrpcc105 xmlns:ns0="http://consultardatosafiliacion.wsbeans.iseries/">
+                        <arg0 xmlns="">
+                            <PCABECERAWS>
+                                <IDSERVICIO>34</IDSERVICIO>
+                                <USREJECUTA>$1</USREJECUTA>
+                            </PCABECERAWS>
+                            <PPRMENTWS>
+                                <ENUDOC>$2</ENUDOC>
+                                <ETIDOC>$3</ETIDOC>
+                                <EFEACC>$4</EFEACC>
+                            </PPRMENTWS>
+                        </arg0>
+                    </ns0:vrpcc105>
+                </soapenv:Body>
+            </soapenv:Envelope>
+        </format>
+        <args>
+            <arg evaluator="xml" expression="$ctx:Usuario"/>
+            <arg evaluator="xml" expression="$ctx:documentid"/>
+            <arg evaluator="xml" expression="$ctx:idtype"/>
+            <arg evaluator="xml" expression="$ctx:FechaAccidenteTransformada"/>
+        </args>
+    </payloadFactory>
+    <log category="DEBUG" level="full" separator=", [PAYLOAD FACTORy]"/>
+    <header action="remove" name="Action" scope="default"/>
+    <property action="remove" name="SOAPAction" scope="transport"/>
+    <header name="SOAPAction" scope="transport" value=""/>
+    <header name="Action" scope="default" value="http://consultardatosafiliacion.wsbeans.iseries/ConsultarDatosAfiliacionServices/vrpcc105Request"/>
+    <call>
+        <endpoint key="RigthsEndPoint"/>
+    </call>
+    <!-- <log level="custom">
+        <property name="Response" value="API"/>
+    </log> -->
+    <property description="Set message type" name="messageType" scope="axis2" type="STRING" value="application/json"/>
+    <log category="DEBUG" level="full" separator="[***DESPUES DEL CALL***]"/>
+    <propertyGroup>
+        <property expression="json-eval($.vrpcc105Response.return.NROELEM_ARR1)" name="NROELEM_ARR1" scope="default" type="STRING"/>
+        <property expression="json-eval($.vrpcc105Response.return.PPIEWS.CODRESPUESTA)" name="CODRESPUESTA" scope="default" type="STRING"/>
+    </propertyGroup>
+    <filter xpath="$ctx:CODRESPUESTA = '0'">
+        <then>
+            <datamapper config="gov:datamapper/vrpcc105ResponseXML_To_vrpcc105ResponseJson.dmc" inputSchema="gov:datamapper/vrpcc105ResponseXML_To_vrpcc105ResponseJson_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/vrpcc105ResponseXML_To_vrpcc105ResponseJson_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/vrpcc105ResponseXML_To_vrpcc105ResponseJson_xsltStyleSheet.xml"/>
+            <log category="DEBUG" level="full" separator="[***DESPUES DEL DATAMAPPER***]"/>
+        </then>
+        <else>
+            <switch source="json-eval($.vrpcc105Response.return.PPIEWS.CODRESPUESTA)">
+                <case regex="^(?!\s*$).+">
+                    <propertyGroup>
+                        <property expression="json-eval($.vrpcc105Response.return.PPIEWS.MSGCORTO)" name="MSGCORTO" scope="default" type="STRING"/>
+                        <property expression="json-eval($.vrpcc105Response.return.PPIEWS.MSGLARGO)" name="MSGLARGO" scope="default" type="STRING"/>
+                        <property expression="json-eval($.vrpcc105Response.return.PPIEWS.CODRESPUESTA)" name="CODRESPUESTA" scope="default" type="STRING"/>
+                    </propertyGroup>
+                    <payloadFactory media-type="json">
+                        <format>{
+								"MsgRsHdr": {
+									"error": {
+										"Status": {
+											"StatusCode": 200,
+											"Severity": "$1",
+											"StatusDesc": "$2",
+											"AdditionalStatus": {
+												"ServerStatusCode": $3,
+												"Severity": "$1",
+												"Category": "Error Negocio",
+												"StatusDesc": "$2"
+											}
+										}
+								   }
+								},
+								"body": null
+							}</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('MSGCORTO')"/>
+                            <arg evaluator="xml" expression="get-property('MSGLARGO')"/>
+                            <arg evaluator="xml" expression="get-property('CODRESPUESTA')"/>
+                        </args>
+                    </payloadFactory>
+                    <propertyGroup>
+                        <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+                        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                        <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+                    </propertyGroup>
+                </case>
+                <case regex="^\s*$">
+                    <property expression="json-eval($.Envelope.Body.Fault.faultstring)" name="faultstring" scope="default" type="STRING"/>
+                    <payloadFactory media-type="json">
+                        <format>{
+						    "MsgRsHdr": {
+						        "error": {
+						            "Status": {
+						                "StatusCode": 200,
+						                "Severity": "null",
+						                "StatusDesc": "La consulta no esta disponible por el momento, por favor intente màs tarde",
+						                "AdditionalStatus": {
+						                    "ServerStatusCode": 500,
+						                    "Severity": "null",
+						                    "Category": "Error Técnico",
+						                    "StatusDesc": "$1"
+						                }
+						            }
+						       }
+						    },
+						    "body": null
+						}</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('faultstring')"/>
+                        </args>
+                    </payloadFactory>
+                    <propertyGroup>
+                        <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+                        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                        <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+                    </propertyGroup>
+                </case>
+                <default>
+                    <log category="DEBUG" level="full"/>
+                </default>
+            </switch>
+        </else>
+    </filter>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+    <respond description="Send result to the client"/>
+</sequence>

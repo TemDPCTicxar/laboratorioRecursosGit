@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="PatchSpendingPreventionInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full"/>
+    <propertyGroup>
+        <property expression="get-property('env','AS400AGPIDSERVICIO')" name="IdServicio" scope="default" type="STRING"/>
+        <property expression="get-property('env','AS400AGPUSREJECUTA')" name="Usuario" scope="default" type="STRING"/>
+    </propertyGroup>
+    <log level="custom">
+        <property expression="$ctx:IdServicio" name="IdServicio"/>
+        <property expression="$ctx:Usuario" name="Usuario"/>
+    </log>
+    <payloadFactory media-type="xml" template-type="freemarker">
+        <format><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:act="http://actualiza_gasto_prevencion.wsbeans.iseries/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <act:vrpca129>
+         <arg0>
+            <PCABECERAWS>
+               <IDSERVICIO>${ctx.IdServicio}</IDSERVICIO>
+               <USREJECUTA>${ctx.Usuario}</USREJECUTA>
+            </PCABECERAWS>
+            <PNROELEM_ENT>1</PNROELEM_ENT>
+            <PPRMENTWS_ENT>
+               <AFILIACION>${payload.affiliationnumber?c}</AFILIACION>
+               <PORCENTAJE>${payload.percentage?c}</PORCENTAJE>
+            </PPRMENTWS_ENT>
+         </arg0>
+      </act:vrpca129>
+   </soapenv:Body>
+</soapenv:Envelope>]]></format>
+        <args/>
+    </payloadFactory>
+    <property description="Asignar Operation" name="Operation" scope="transport" type="STRING" value="vrpca129"/>
+    <log level="full"/>
+    <send>
+        <endpoint key="AS400ActualizaGastoPrevencionEndpoint"/>
+    </send>
+</sequence>

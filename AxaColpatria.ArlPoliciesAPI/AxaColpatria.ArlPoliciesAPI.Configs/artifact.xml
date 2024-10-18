@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="ArlPoliciesAPI" groupId="com.axa.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ArlPoliciesAPI.xml</file>
+    </artifact>
+    <artifact name="ArlPoliciesAPI_swagger" groupId="com.axa.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ArlPoliciesAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="ArlPoliciesAPI_metadata" groupId="com.axa.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ArlPoliciesAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="ClaimsRejectionreasonsInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ClaimsRejectionreasonsInSequence.xml</file>
+    </artifact>
+    <artifact name="ClaimsRigthsInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ClaimsRigthsInSequence.xml</file>
+    </artifact>
+    <artifact name="ArlPoliciesAPIFaultSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ArlPoliciesAPIFaultSequence.xml</file>
+    </artifact>
+    <artifact name="RejectionreasonsEndPoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/RejectionreasonsEndPoint.xml</file>
+    </artifact>
+    <artifact name="RigthsEndPoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/RigthsEndPoint.xml</file>
+    </artifact>
+    <artifact name="GetWorkAccidentInformationEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetWorkAccidentInformationEndpoint.xml</file>
+    </artifact>
+    <artifact name="ClaimsWorkAccidentInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ClaimsWorkAccidentInSequence.xml</file>
+    </artifact>
+    <artifact name="ClaimsEconomicCompensationInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ClaimsEconomicCompensationInSequence.xml</file>
+    </artifact>
+    <artifact name="EconomicCompensationEndPoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EconomicCompensationEndPoint.xml</file>
+    </artifact>
+    <artifact name="EnrollmentInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/EnrollmentInSequence.xml</file>
+    </artifact>
+    <artifact name="EnrollmentEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/EnrollmentEndpoint.xml</file>
+    </artifact>
+    <artifact name="InvollmentInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/InvollmentInSequence.xml</file>
+    </artifact>
+    <artifact name="InvollmentEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/InvollmentEndpoint.xml</file>
+    </artifact>
+    <artifact name="HealthTransferableEmployerEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/HealthTransferableEmployerEndpoint.xml</file>
+    </artifact>
+    <artifact name="HealthTransferableEmployerInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/HealthTransferableEmployerInSeq.xml</file>
+    </artifact>
+    <artifact name="HealthDefaultDebtInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/HealthDefaultDebtInSeq.xml</file>
+    </artifact>
+    <artifact name="HealthDefaultDebtEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/HealthDefaultDebtEndpoint.xml</file>
+    </artifact>
+    <artifact name="CompleteEnrollmentsInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/CompleteEnrollmentsInSeq.xml</file>
+    </artifact>
+    <artifact name="CompleteEnrollmentsEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/CompleteEnrollmentsEndpoint.xml</file>
+    </artifact>
+    <artifact name="ClaimsForLegalizationInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ClaimsForLegalizationInSequence.xml</file>
+    </artifact>
+    <artifact name="GetForLegalizationEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetForLegalizationEndpoint.xml</file>
+    </artifact>
+    <artifact name="ClaimsUpdateLockStatusInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ClaimsUpdateLockStatusInSequence.xml</file>
+    </artifact>
+    <artifact name="UpdateLockStatusEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/UpdateLockStatusEndpoint.xml</file>
+    </artifact>
+    <artifact name="CheckInvollmentInformationInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/CheckInvollmentInformationInSequence.xml</file>
+    </artifact>
+    <artifact name="CheckInvollmentInformationEndPoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/CheckInvollmentInformationEndPoint.xml</file>
+    </artifact>
+    <artifact name="CheckInvollmentInformationOutSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/CheckInvollmentInformationOutSequence.xml</file>
+    </artifact>
+    <artifact name="MockARL" groupId="com.axa.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/MockARL.xml</file>
+    </artifact>
+    <artifact name="MockARL_swagger" groupId="com.axa.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/MockARL_swagger.yaml</file>
+    </artifact>
+    <artifact name="MockARL_metadata" groupId="com.axa.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/MockARL_metadata.yaml</file>
+    </artifact>
+    <artifact name="ConsultsSATCompanyAffiliationInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ConsultsSATCompanyAffiliationInSeq.xml</file>
+    </artifact>
+    <artifact name="ConsultsSATCompanyAffiliationEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ConsultsSATCompanyAffiliationEndpoint.xml</file>
+    </artifact>
+    <artifact name="ConsultsInfoSATCompanyAffiliationInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ConsultsInfoSATCompanyAffiliationInSeq.xml</file>
+    </artifact>
+    <artifact name="ConsultsInfoSATCompanyAffiliationEndPoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ConsultsInfoSATCompanyAffiliationEndPoint.xml</file>
+    </artifact>
+    <artifact name="ConsultsArrearSATInseq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ConsultsArrearSATInseq.xml</file>
+    </artifact>
+    <artifact name="ConsultsArrearSATEndPoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ConsultsArrearSATEndPoint.xml</file>
+    </artifact>
+    <artifact name="ConsultsSATCompanyTransferableInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ConsultsSATCompanyTransferableInSeq.xml</file>
+    </artifact>
+    <artifact name="ConsultsSATCompanyTransferableEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ConsultsSATCompanyTransferableEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalChangeTypeAndEmployeeIdentificationNumberMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalChangeTypeAndEmployeeIdentificationNumberMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalRegisterNewNoCashIncomePersonalMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalRegisterNewNoCashIncomePersonalMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalRegisterNewNoCashIncomeBulkMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalRegisterNewNoCashIncomeBulkMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalUpdateDocumentTypeNoveltyInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalUpdateDocumentTypeNoveltyInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalIneffectiveAffiliationsInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalIneffectiveAffiliationsInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalIneffectiveAffiliationsBulkInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalIneffectiveAffiliationsBulkInSeq.xml</file>
+    </artifact>
+    <artifact name="AS400ActualizaGastoPrevencionEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AS400ActualizaGastoPrevencionEndpoint.xml</file>
+    </artifact>
+    <artifact name="PatchSpendingPreventionInSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/PatchSpendingPreventionInSequence.xml</file>
+    </artifact>
+    <artifact name="PatchSpendingPreventionOutSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/PatchSpendingPreventionOutSequence.xml</file>
+    </artifact>
+    <artifact name="PatchSpendingPreventionFaultSequence" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/PatchSpendingPreventionFaultSequence.xml</file>
+    </artifact>
+    <artifact name="ARLPortalCompanyGetInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalCompanyGetInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalCompanyGetMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalCompanyGetMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalCompanyBulkInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalCompanyBulkInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalCompanyBulkMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalCompanyBulkMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalEmployeeGetInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalEmployeeGetInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalEmployeeGetMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalEmployeeGetMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalEmployeeBulkInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalEmployeeBulkInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalEmployeeBulkMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalEmployeeBulkMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalSelfEmployeeIngressInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalSelfEmployeeIngressInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalSelfEmployeeIngressMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalSelfEmployeeIngressMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalNoveltyRegisterMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalNoveltyRegisterMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalEmployeeIngressMiEndpoint" groupId="com.axa.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ARLPortalEmployeeIngressMiEndpoint.xml</file>
+    </artifact>
+    <artifact name="ARLPortalEmployeeIngressInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalEmployeeIngressInSeq.xml</file>
+    </artifact>
+    <artifact name="ARLPortalNoveltyRegisterInSeq" groupId="com.axa.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ARLPortalNoveltyRegisterInSeq.xml</file>
+    </artifact>
+</artifacts>

@@ -1,0 +1,11 @@
+---
+key: "ArlPoliciesAPI-1.0.0"
+name : "ArlPoliciesAPI"
+displayName : "ArlPoliciesAPI"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/claims"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

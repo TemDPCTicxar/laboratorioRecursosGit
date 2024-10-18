@@ -1,0 +1,290 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+var count_i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae = 0;
+outputroot =  {};
+outputroot.MsgRsHdr =  {};
+outputroot.MsgRsHdr.error = Number(DM_PROPERTIES.DEFAULT['error']);
+outputroot.body =  {};
+outputroot.body.Lista =  {};
+outputroot.body.Lista.Siniestro =  {};
+outputroot.body.Lista.Siniestro.ActividadEconomica = Number(DM_PROPERTIES.DEFAULT['ActividadEcomomicaN']);
+outputroot.body.Lista.Siniestro.Empresa =  {};
+outputroot.body.Lista.Siniestro.Empresa.Identificacion =  {};
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.CTEmpresa =  {};
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.Empleado =  {};
+outputroot.body.Lista.Siniestro.Empleado.Identificacion =  {};
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.Responsable =  {};
+outputroot.body.Lista.Siniestro.Responsable.Identificacion =  {};
+outputroot.body.Lista.Siniestro.Responsable.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.PrimerTestigo =  {};
+outputroot.body.Lista.Siniestro.PrimerTestigo.Identificacion =  {};
+outputroot.body.Lista.Siniestro.PrimerTestigo.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.SegundoTestigo =  {};
+outputroot.body.Lista.Siniestro.SegundoTestigo.Identificacion =  {};
+outputroot.body.Lista.Siniestro.SegundoTestigo.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.Trabajador =  {};
+outputroot.body.Lista.Siniestro.Trabajador.DatosBasicos =  {};
+outputroot.body.Lista.Siniestro.Accidente =  {};
+outputroot.body.Lista.Siniestro.Recreativo =  {};
+
+for(i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae in inputroot.Lista){
+outputroot.body.Lista.Siniestro.Empresa.Identificacion.NumeroIdentificacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NumeroIdentificacionEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.Identificacion.TipoDocumento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoIdentificacionEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.CentroTrabajo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CentroTrabajoEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.CodigoCiudad = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoCiudadEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.CodigoDepartamento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoDepartamentoEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.Correo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CorreoEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.CorreoPila = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CorreoPilaEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.Direccion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DireccionEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.Fax = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FaxEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.FechaIngreso = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FechaIngresoEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.FechaRetiro = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FechaRetiroEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.MismosDatosCentroTrabajo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].MismosDatosCentroTrabajoEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.RazonSocial = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NombreRazonSocial;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.Orden = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].OrdenEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.RepresentacionEmpresa = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].RepresentacionEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.Telefono = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TelefonoEmpresa;
+outputroot.body.Lista.Siniestro.Empresa.DatosBasicos.Zona = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ZonaUREmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.ActividadEconomica = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ActividadEcomomicaCTEmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.Ciudad = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CiudadCTEmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.Departamento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DepartamentoCTEmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.Direccion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DireccionCTEmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.Fax = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FaxCTEmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.Telefono = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TelefonoCTEmpresa;
+outputroot.body.Lista.Siniestro.CTEmpresa.DatosBasicos.Zona = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ZonaCTEmpresa;
+outputroot.body.Lista.Siniestro.Empleado.Identificacion.Identificacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].IdentificacionEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.Identificacion.TipoDocumento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoIdentificacionEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.ActividadEconomica = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ActividadEcomomicaEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Cargo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CargoEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.CodigoCiudad = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoCiudadEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.CodigoDepartamento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoDepartamentoEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.CodigoAFP = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoAFPEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.CodigoEPS = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoEPSEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Direccion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DireccionEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Fax = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FaxEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.FechaNacimiento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FechaNacimientoEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Genero = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].GeneroEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.JornadaTrabajo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].JornadaTrabajoEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Nombre = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NombreEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Ocupacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].OcupacionEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Salario = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].SalarioEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Telefono = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TelefonoEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.TiempoEmpresa = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TiempoEmpresaEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.TiempoOcupacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TiempoOcupacionEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.TipoEmpleado = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.TipoVinculacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoVinculacionEmpleado;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.TipoVinculacionLaboral = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoVinculacionLaboral;
+outputroot.body.Lista.Siniestro.Empleado.DatosBasicos.Zona = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ZonaEmpleado;
+outputroot.body.Lista.Siniestro.AgenteAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].AgenteAccidente;
+outputroot.body.Lista.Siniestro.Responsable.Identificacion.NumeroIdentificacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NumeroIdentificacionResponsable;
+outputroot.body.Lista.Siniestro.Responsable.Identificacion.TipoDocumento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoIdentificacionResponsable;
+outputroot.body.Lista.Siniestro.Responsable.DatosBasicos.Cargo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CargoResponsable;
+outputroot.body.Lista.Siniestro.Responsable.DatosBasicos.Nombre = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NombreResponsable;
+outputroot.body.Lista.Siniestro.PrimerTestigo.Identificacion.NumeroDocumento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NumeroDocumentoTestigoAccidente;
+outputroot.body.Lista.Siniestro.PrimerTestigo.DatosBasicos.Nombre = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NombreTestigoAccidente;
+outputroot.body.Lista.Siniestro.PrimerTestigo.DatosBasicos.Cargo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CargoTestigoAccidente;
+outputroot.body.Lista.Siniestro.SegundoTestigo.Identificacion.NumeroDocumento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NumeroDocumentoTestigoIIAccidente;
+outputroot.body.Lista.Siniestro.SegundoTestigo.Identificacion.TipoDocumento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoDocumentoTestigoIIAccidente;
+outputroot.body.Lista.Siniestro.SegundoTestigo.DatosBasicos.Nombre = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NombreTestigoIIAccidente;
+outputroot.body.Lista.Siniestro.SegundoTestigo.DatosBasicos.Cargo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CargoTestigoIIAccidente;
+outputroot.body.Lista.Siniestro.Trabajador.DatosBasicos.Cargo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CargoTrabajador;
+outputroot.body.Lista.Siniestro.Trabajador.DatosBasicos.Labor = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LaborTrabajador;
+outputroot.body.Lista.Siniestro.Trabajador.DatosBasicos.LugarSalia = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LugarSaliaTrabajador;
+outputroot.body.Lista.Siniestro.CausoMuerteAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CausoMuerteAccidente;
+outputroot.body.Lista.Siniestro.Accidente.CodigoCiudad = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoCiudadAccidente;
+outputroot.body.Lista.Siniestro.Accidente.CodigoDepartamento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CodigoDepartamentoAccidente;
+outputroot.body.Lista.Siniestro.Accidente.DescripcionDetallada = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DescripcionDetalladaAccidente;
+outputroot.body.Lista.Siniestro.Accidente.DescripcionLaborNoHabitual = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DescripcionLaborNoHabitualAccidente;
+outputroot.body.Lista.Siniestro.Accidente.HoraAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].HoraAccidente;
+outputroot.body.Lista.Siniestro.Accidente.HoraAccidenteTransito = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].HoraAccidenteTransito;
+outputroot.body.Lista.Siniestro.Accidente.IndicadorLabor = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].IndicadorLaborAccidente;
+outputroot.body.Lista.Siniestro.Accidente.Jornada = Number(inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].JornadaAccidente);
+outputroot.body.Lista.Siniestro.Accidente.LaborNoHabitual = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LaborNoHabitualAccidente;
+outputroot.body.Lista.Siniestro.Accidente.LugarAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LugarAccidente;
+outputroot.body.Lista.Siniestro.Accidente.LugarAccidenteTransito = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LugarAccidenteTransito;
+outputroot.body.Lista.Siniestro.Accidente.LugarHaciaDondeDirigia = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LugarHaciaDondeDirigia;
+outputroot.body.Lista.Siniestro.Accidente.LugarHaciaDondeDirigiaEsSitioTrabajo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LugarHaciaDondeDirigiaEsSitioTrabajo;
+outputroot.body.Lista.Siniestro.Accidente.Mecanismo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].MecanismoAccidente;
+outputroot.body.Lista.Siniestro.Accidente.OtroMecanismo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].OtroMecanismoAccidente;
+outputroot.body.Lista.Siniestro.Accidente.OtroSitio = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].OtroSitioAccidente;
+outputroot.body.Lista.Siniestro.Accidente.OtroTipoLesion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].OtroTipoLesion;
+outputroot.body.Lista.Siniestro.Accidente.ParteCuerpo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ParteCuerpo;
+outputroot.body.Lista.Siniestro.Accidente.Regional = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].Regional;
+outputroot.body.Lista.Siniestro.Accidente.Sitio = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].SitioAccidente;
+outputroot.body.Lista.Siniestro.Accidente.TipoAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoAccidente;
+outputroot.body.Lista.Siniestro.Accidente.TipoLesion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoLesion;
+outputroot.body.Lista.Siniestro.Accidente.TotalTiempoPrevioAntesAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TotalTiempoPrevioAntesAccidente;
+outputroot.body.Lista.Siniestro.Accidente.ZonaAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ZonaAccidente;
+outputroot.body.Lista.Siniestro.Recreativo.AutorizaEmpresaTemporal = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].AutorizaEmpresaTemporalRecreativo;
+outputroot.body.Lista.Siniestro.Recreativo.DescripcionDetallada = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].DescripcionDetalladaRecreativo;
+outputroot.body.Lista.Siniestro.Recreativo.EmpresaAutorizoEventoRecreativo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].EmpresaAutorizoEventoRecreativo;
+outputroot.body.Lista.Siniestro.Recreativo.EmpresaOrganizaEventoRecreativo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].EmpresaOrganizaEventoRecreativo;
+outputroot.body.Lista.Siniestro.Recreativo.OrdenEmpresaRecreativo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].OrdenEmpresaRecreativo;
+outputroot.body.Lista.Siniestro.EmpresaAutorizoEvento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].EmpresaAutorizoEvento;
+outputroot.body.Lista.Siniestro.EmpresaOrganizaEvento = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].EmpresaOrganizaEvento;
+outputroot.body.Lista.Siniestro.EsAutorizado = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].EsAutorizado;
+outputroot.body.Lista.Siniestro.EstadoSiniestro = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].EstadoSiniestro;
+outputroot.body.Lista.Siniestro.FechaAccidente = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FechaAccidente;
+outputroot.body.Lista.Siniestro.FechaRecepcion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].FechaRecepcion;
+outputroot.body.Lista.Siniestro.HorarioTrabajoAsignado = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].HorarioTrabajoAsignado;
+outputroot.body.Lista.Siniestro.InformacionAdicional = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].InformacionAdicional;
+outputroot.body.Lista.Siniestro.InformacionAdicionalDeportivo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].InformacionAdicionalDeportivo;
+outputroot.body.Lista.Siniestro.LaborHabitual = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].LaborHabitual;
+outputroot.body.Lista.Siniestro.NumeroAfiliacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NumeroAfiliacion;
+outputroot.body.Lista.Siniestro.NumeroContrato = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].NumeroContrato;
+outputroot.body.Lista.Siniestro.Secuencia = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].Secuencia;
+outputroot.body.Lista.Siniestro.TipoPrestacion = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoPrestacion;
+outputroot.body.Lista.Siniestro.TipoReporte = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TipoReporte;
+outputroot.body.Lista.Siniestro.TorneoExterno = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].TorneoExterno;
+outputroot.body.Lista.Siniestro.UsuarioRegistro = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].UsuarioRegistro;
+outputroot.body.Lista.Siniestro.ModalidadTrabajo = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].ModalidadTrabajo;
+outputroot.body.Lista.Siniestro.CaidaAlturas = inputroot.Lista[i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae].CaidaAlturas;
+
+count_i_Lista_cfb090ed_5f2f_4785_9508_7a52cf5727ae++;
+}
+return outputroot;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

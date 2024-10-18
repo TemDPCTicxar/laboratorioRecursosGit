@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ConsultsInfoSATCompanyAffiliationInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property expression="get-property('query.param.tipodocumentoempleador')" name="tipodocumento"/>
+        <property expression="get-property('query.param.numerodocumentoempleador')" name="numerodocumento"/>
+        <property expression="get-property('query.param.consecutivonitempleador')" name="consecutivonit"/>
+    </log>
+    <propertyGroup>
+        <property expression="get-property('query.param.tipodocumentoempleador')" name="uri.var.tipodocumento" scope="default" type="STRING"/>
+        <property expression="get-property('query.param.numerodocumentoempleador')" name="uri.var.numerodocumento" scope="default" type="STRING"/>
+        <property expression="get-property('query.param.consecutivonitempleador')" name="uri.var.consecutivonit" scope="default" type="STRING"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="ConsultsInfoSATCompanyAffiliationEndPoint"/>
+    </call>
+    <log level="full" separator="[***Despues del call Consult Info***]"/>
+    <respond/>
+</sequence>

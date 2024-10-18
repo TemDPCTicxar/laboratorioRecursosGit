@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_SqhO4NXCEe6udpfWP03hdg" type="DataMapper" name="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_SzsZANXCEe6udpfWP03hdg" type="2002" fontName="Segoe UI">
+    <children xmi:type="notation:Shape" xmi:id="_7QafcNXCEe6udpfWP03hdg" type="3002" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_7QafctXCEe6udpfWP03hdg" type="5002"/>
+      <children xmi:type="notation:Shape" xmi:id="_7QjpYNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7QjpYtXCEe6udpfWP03hdg" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBcNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7QuBctXCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_7QuBg9XCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBhNXCEe6udpfWP03hdg" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7QuBhdXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBhtXCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBcdXCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBc9XCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7QuBddXCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_7RCKgNXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.1/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RCKgdXCEe6udpfWP03hdg" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7RCKgtXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.1/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RCKg9XCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBdNXCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBdtXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7QuBeNXCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_7RCKhNXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.2/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RCKhdXCEe6udpfWP03hdg" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7RCKhtXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.2/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RCKh9XCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBd9XCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBedXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7QuBe9XCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_7RCKiNXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.3/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RCKidXCEe6udpfWP03hdg" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7RCKitXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.3/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RCKi9XCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.3"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBetXCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBfNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7QuBftXCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_7RIRINXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.4/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RIRIdXCEe6udpfWP03hdg" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7RIRItXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.4/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7RIRI9XCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.4"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBfdXCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBf9XCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+          <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBgNXCEe6udpfWP03hdg" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7QuBgdXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+          <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QuBgtXCEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpYdXCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7QjpY9XCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7QjpZdXCEe6udpfWP03hdg" type="5001"/>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpZNXCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7QjpZtXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7QjpaNXCEe6udpfWP03hdg" type="5001"/>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpZ9XCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7QjpadXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7Qjpa9XCEe6udpfWP03hdg" type="5001"/>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpatXCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7QjpbNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7QjpbtXCEe6udpfWP03hdg" type="5001"/>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpbdXCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7Qjpb9XCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+        <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpcNXCEe6udpfWP03hdg" x="-1" y="-11"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_7QjpcdXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+        <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QjpctXCEe6udpfWP03hdg"/>
+      </children>
+      <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7QafcdXCEe6udpfWP03hdg"/>
+    </children>
+    <element xmi:type="datamapper:Input" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SzsZAdXCEe6udpfWP03hdg" y="196" width="250" height="220"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_SzsZAtXCEe6udpfWP03hdg" type="2003" fontName="Segoe UI">
+    <children xmi:type="notation:Shape" xmi:id="_9WolENXCEe6udpfWP03hdg" type="3011" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_9WtdkNXCEe6udpfWP03hdg" type="5003"/>
+      <children xmi:type="notation:Shape" xmi:id="_9WuEoNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_9WuEotXCEe6udpfWP03hdg" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_9WuEqtXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_9WuErNXCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_9WuEsdXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.0/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEstXCEe6udpfWP03hdg" x="-10" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9WuEs9XCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.0/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEtNXCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.0/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEq9XCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9WuErdXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+          <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuErtXCEe6udpfWP03hdg" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9WuEr9XCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+          <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEsNXCEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEodXCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9WuEo9XCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_9WuEpdXCEe6udpfWP03hdg" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_9W3OkNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_9W3OktXCEe6udpfWP03hdg" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_9W3Ol9XCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_9W3OmdXCEe6udpfWP03hdg" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_9W3OqtXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+              <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.0/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3Oq9XCEe6udpfWP03hdg" x="-10" y="4"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_9W3OrNXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+              <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.0/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OrdXCEe6udpfWP03hdg"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OmNXCEe6udpfWP03hdg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9W3OmtXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_9W3OnNXCEe6udpfWP03hdg" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_9W3OrtXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+              <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.1/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3Or9XCEe6udpfWP03hdg" x="-10" y="4"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_9W3OsNXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+              <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.1/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OsdXCEe6udpfWP03hdg"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3Om9XCEe6udpfWP03hdg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9W3OndXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_9W3On9XCEe6udpfWP03hdg" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_9W3OstXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+              <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.2/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3Os9XCEe6udpfWP03hdg" x="-10" y="4"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_9W3OtNXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+              <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.2/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OtdXCEe6udpfWP03hdg"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OntXCEe6udpfWP03hdg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9W3OoNXCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_9W3OotXCEe6udpfWP03hdg" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_9XA_kNXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+              <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.3/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XA_kdXCEe6udpfWP03hdg" x="-10" y="4"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_9XA_ktXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+              <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.3/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XA_k9XCEe6udpfWP03hdg"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OodXCEe6udpfWP03hdg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9W3Oo9XCEe6udpfWP03hdg" type="3003" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_9W3OpdXCEe6udpfWP03hdg" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_9XA_lNXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+              <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.4/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XA_ldXCEe6udpfWP03hdg" x="-10" y="4"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_9XA_ltXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+              <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.4/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XA_l9XCEe6udpfWP03hdg"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@node.4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OpNXCEe6udpfWP03hdg"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9W3OptXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3Op9XCEe6udpfWP03hdg" x="-1" y="-11"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_9W3OqNXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OqdXCEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OkdXCEe6udpfWP03hdg"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9W3Ok9XCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+          <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OlNXCEe6udpfWP03hdg" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9W3OldXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+          <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9W3OltXCEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@node.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEpNXCEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9WuEptXCEe6udpfWP03hdg" type="3020" fontName="Segoe UI">
+        <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEp9XCEe6udpfWP03hdg" x="-1" y="-11"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_9WuEqNXCEe6udpfWP03hdg" type="3019" fontName="Segoe UI">
+        <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WuEqdXCEe6udpfWP03hdg"/>
+      </children>
+      <element xmi:type="datamapper:TreeNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output/@treeNode.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9WolEdXCEe6udpfWP03hdg"/>
+    </children>
+    <element xmi:type="datamapper:Output" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@output"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SzsZA9XCEe6udpfWP03hdg" x="959" y="203" width="252" height="200"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_OYrJwNXDEe6udpfWP03hdg" type="2008" fontName="Segoe UI">
+    <children xmi:type="notation:Shape" xmi:id="_OYrJwtXDEe6udpfWP03hdg" type="3012" fontName="Segoe UI">
+      <children xmi:type="notation:Shape" xmi:id="_OY0TsNXDEe6udpfWP03hdg" type="3013" fontName="Segoe UI">
+        <element xmi:type="datamapper:OperatorLeftContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0/@basicContainer/@leftContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OY0TsdXDEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_OY0TstXDEe6udpfWP03hdg" type="3016" fontName="Segoe UI">
+        <children xmi:type="notation:Shape" xmi:id="_OZH1sNXDEe6udpfWP03hdg" type="3017" fontName="Segoe UI">
+          <children xmi:type="notation:Shape" xmi:id="_OZH1stXDEe6udpfWP03hdg" type="3018" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OZH1s9XDEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:OperatorRightConnector" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OZH1sdXDEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:OperatorRightContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0/@basicContainer/@rightContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OY0Ts9XDEe6udpfWP03hdg"/>
+      </children>
+      <element xmi:type="datamapper:OperatorBasicContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0/@basicContainer"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OYrJw9XDEe6udpfWP03hdg"/>
+    </children>
+    <element xmi:type="datamapper:Constant" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OYrJwdXDEe6udpfWP03hdg" x="258" y="85"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_xEUpcNXDEe6udpfWP03hdg" type="2034" fontName="Segoe UI">
+    <children xmi:type="notation:Shape" xmi:id="_xEclQNXDEe6udpfWP03hdg" type="3012" fontName="Segoe UI">
+      <children xmi:type="notation:Shape" xmi:id="_xEclQtXDEe6udpfWP03hdg" type="3013" fontName="Segoe UI">
+        <children xmi:type="notation:Shape" xmi:id="_xEwHQNXDEe6udpfWP03hdg" type="3014" fontName="Segoe UI">
+          <children xmi:type="notation:Shape" xmi:id="_xEzKkNXDEe6udpfWP03hdg" type="3015" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xEzKkdXDEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:OperatorLeftConnector" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@leftContainer/@leftConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xEwHQdXDEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:OperatorLeftContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@leftContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xEclQ9XDEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_xEclRNXDEe6udpfWP03hdg" type="3016" fontName="Segoe UI">
+        <children xmi:type="notation:Shape" xmi:id="_xE2N5NXDEe6udpfWP03hdg" type="3017" fontName="Segoe UI">
+          <children xmi:type="notation:Shape" xmi:id="_xE4qINXDEe6udpfWP03hdg" type="3018" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xE4qIdXDEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:OperatorRightConnector" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xE2N5dXDEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:OperatorRightContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@rightContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xEclRdXDEe6udpfWP03hdg"/>
+      </children>
+      <element xmi:type="datamapper:OperatorBasicContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xEclQdXDEe6udpfWP03hdg"/>
+    </children>
+    <element xmi:type="datamapper:CustomFunction" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xEY64NXDEe6udpfWP03hdg" x="336" y="448"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_V3a90NXEEe6udpfWP03hdg" type="2034" fontName="Segoe UI">
+    <children xmi:type="notation:Shape" xmi:id="_V3a90tXEEe6udpfWP03hdg" type="3012" fontName="Segoe UI">
+      <children xmi:type="notation:Shape" xmi:id="_V3a91NXEEe6udpfWP03hdg" type="3013" fontName="Segoe UI">
+        <children xmi:type="notation:Shape" xmi:id="_V3t4wNXEEe6udpfWP03hdg" type="3014" fontName="Segoe UI">
+          <children xmi:type="notation:Shape" xmi:id="_V3t4wtXEEe6udpfWP03hdg" type="3015" fontName="Segoe UI">
+            <element xmi:type="datamapper:InNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3t4w9XEEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:OperatorLeftConnector" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@leftContainer/@leftConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3t4wdXEEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:OperatorLeftContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@leftContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3a91dXEEe6udpfWP03hdg"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_V3a91tXEEe6udpfWP03hdg" type="3016" fontName="Segoe UI">
+        <children xmi:type="notation:Shape" xmi:id="_V3t4yNXEEe6udpfWP03hdg" type="3017" fontName="Segoe UI">
+          <children xmi:type="notation:Shape" xmi:id="_V3t4ytXEEe6udpfWP03hdg" type="3018" fontName="Segoe UI">
+            <element xmi:type="datamapper:OutNode" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@rightContainer/@rightConnectors.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3t4y9XEEe6udpfWP03hdg"/>
+          </children>
+          <element xmi:type="datamapper:OperatorRightConnector" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@rightContainer/@rightConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3t4ydXEEe6udpfWP03hdg"/>
+        </children>
+        <element xmi:type="datamapper:OperatorRightContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@rightContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3a919XEEe6udpfWP03hdg"/>
+      </children>
+      <element xmi:type="datamapper:OperatorBasicContainer" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3a909XEEe6udpfWP03hdg"/>
+    </children>
+    <element xmi:type="datamapper:CustomFunction" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V3a90dXEEe6udpfWP03hdg" x="322" y="553"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_SqhO4dXCEe6udpfWP03hdg"/>
+  <element xmi:type="datamapper:DataMapperRoot" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_STW2oNXDEe6udpfWP03hdg" type="4001" source="_7QuBhdXCEe6udpfWP03hdg" target="_9W3OqtXCEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_STW2odXDEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_STW2otXDEe6udpfWP03hdg" points="[-2, 0, -149, -56]$[145, 56, -2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_STZS4NXDEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_STZS4dXDEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_tZwcMNXDEe6udpfWP03hdg" type="4001" source="_7RCKgtXCEe6udpfWP03hdg" target="_9W3OrtXCEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_tZwcMdXDEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tZwcMtXDEe6udpfWP03hdg" points="[-2, 0, -149, -56]$[145, 56, -2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tZ0toNXDEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tZ0todXDEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_uMyboNXDEe6udpfWP03hdg" type="4001" source="_7RCKhtXCEe6udpfWP03hdg" target="_9W3OstXCEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_uMybodXDEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uMybotXDEe6udpfWP03hdg" points="[-2, 0, -149, -56]$[145, 56, -2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uM1e8NXDEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uM1e8dXDEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_T6xq8NXEEe6udpfWP03hdg" type="4001" source="_7RCKitXCEe6udpfWP03hdg" target="_xEzKkNXDEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_T6xq8dXEEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.3/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T6xq8tXEEe6udpfWP03hdg" points="[-2, 0, -88, -169]$[85, 169, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T6xq89XEEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T6xq9NXEEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_VKUAMNXEEe6udpfWP03hdg" type="4001" source="_xE4qINXDEe6udpfWP03hdg" target="_9XA_kNXCEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_VKUAMdXEEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VKUAMtXEEe6udpfWP03hdg" points="[-1, 0, -36, 102]$[33, -102, -2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VKVOUNXEEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VKVOUdXEEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_b94lwNXEEe6udpfWP03hdg" type="4001" source="_7RIRItXCEe6udpfWP03hdg" target="_V3t4wtXEEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_b94lwdXEEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@input/@treeNode.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_b94lwtXEEe6udpfWP03hdg" points="[-2, 0, -74, -226]$[71, 226, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b94lw9XEEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b94lxNXEEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_eOJYMNXEEe6udpfWP03hdg" type="4001" source="_V3t4ytXEEe6udpfWP03hdg" target="_9XA_lNXCEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_eOJYMdXEEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.2/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eOJYMtXEEe6udpfWP03hdg" points="[-1, 0, -50, 159]$[47, -159, -2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eOJYM9XEEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eOJYNNXEEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_sjlMsNXEEe6udpfWP03hdg" type="4001" source="_OZH1stXDEe6udpfWP03hdg" target="_9WuEsdXCEe6udpfWP03hdg">
+    <styles xmi:type="notation:FontStyle" xmi:id="_sjlMsdXEEe6udpfWP03hdg" fontName="Segoe UI"/>
+    <element xmi:type="datamapper:DataMapperLink" href="ConsultaSiniestroPorLegalizar_to_claimsLegalizations.datamapper#//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sjlMstXEEe6udpfWP03hdg" points="[-1, 0, -516, -169]$[513, 169, -2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sjlMs9XEEe6udpfWP03hdg" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sjlMtNXEEe6udpfWP03hdg" id="CENTER"/>
+  </edges>
+</notation:Diagram>

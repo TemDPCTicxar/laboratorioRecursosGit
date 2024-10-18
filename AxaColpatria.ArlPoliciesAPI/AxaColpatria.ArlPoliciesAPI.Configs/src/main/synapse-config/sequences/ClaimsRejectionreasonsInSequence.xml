@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ClaimsRejectionreasonsInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="DEBUG" level="custom">
+        <property name="Start" value="rejectionreasons"/>
+    </log>
+    <propertyGroup description="Informacion de flujo">
+        <property name="Proceso" scope="default" type="STRING" value="SiniestrosARL"/>
+        <property name="Categoria" scope="default" type="STRING" value="Información"/>
+        <property name="Criticidad" scope="default" type="STRING" value="Información"/>
+        <property name="Metodo" scope="default" type="STRING" value="ConsultarCausalesRechazo"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="RejectionreasonsEndPoint"/>
+    </call>
+    <property expression="json-eval($.isDone)" name="isDone" scope="default" type="STRING"/>
+    <filter regex="true" source="$ctx:isDone">
+        <then>
+            <payloadFactory description="Build payload with error information" media-type="json">
+                <format>{
+					    "MsgRsHdr": {
+					        "error": null
+					    },
+					    "body": {
+					       "results": [$1]
+					    }
+					}
+				</format>
+                <args>
+                    <arg evaluator="json" expression="$.Lista"/>
+                </args>
+            </payloadFactory>
+        </then>
+        <else>
+            <log category="DEBUG" level="full" separator="--- isDone is NOT TRUE ---"/>
+            <payloadFactory media-type="json">
+                <format>{
+					    "MsgRsHdr": {
+					        "error": {
+					            "Status": {
+					                "StatusCode": 200,
+					                "Severity": null,
+					                "StatusDesc": "$2",
+					                "AdditionalStatus": {
+					                    "ServerStatusCode": $1,
+					                    "Severity": null,
+					                    "Category": "Error Negocio",
+					                    "StatusDesc": "$2"
+					                }
+					            }
+					       }
+					    },
+					    "body": null
+					}</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+                    <arg evaluator="json" expression="$.Mensaje"/>
+                </args>
+            </payloadFactory>
+            <propertyGroup>
+                <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+                <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+            </propertyGroup>
+        </else>
+    </filter>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+    <respond/>
+</sequence>

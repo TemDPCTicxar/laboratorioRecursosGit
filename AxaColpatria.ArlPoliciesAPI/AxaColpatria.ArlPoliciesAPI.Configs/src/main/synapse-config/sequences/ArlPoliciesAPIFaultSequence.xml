@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ArlPoliciesAPIFaultSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="WARN" description="" level="custom">
+        <property expression="get-property('axis2','HTTP_SC')" name="AXA_ERROR_HTTP_SC"/>
+        <property expression="get-property('ERROR_CODE')" name="AXA_ERROR_CODE"/>
+        <property expression="get-property('ERROR_EXCEPTION')" name="AXA_ERROR_EXCEPTION"/>
+        <property expression="get-property('ERROR_MESSAGE')" name="AXA_ERROR_MESSAGE"/>
+        <property expression="get-property('proxy.name')" name="AXA_ERROR_ORIGIN"/>
+    </log>
+    <switch description="" source="get-property('ERROR_CODE')" xmlns:ns="http://org.apache.synapse/xsd">
+        <case regex="0">
+            <property description="Response HTTP Code" name="HTTP_SC" scope="axis2" type="INTEGER" value="400"/>
+            <log separator=",">
+                <property name="ERROR_MESSAGE_PROXY" value="Malformed Message"/>
+            </log>
+        </case>
+        <case regex="101508|101504">
+            <property description="Response HTTP Code" name="HTTP_SC" scope="axis2" type="INTEGER" value="504"/>
+            <log separator=",">
+                <property name="ERROR_MESSAGE_PROXY" value="Timeout Backend Connection"/>
+            </log>
+        </case>
+        <case regex="101503|101505|101506|101507|101509|101510|303001|101500">
+            <property description="Response HTTP Code" name="HTTP_SC" scope="axis2" type="INTEGER" value="503"/>
+            <log separator=",">
+                <property name="ERROR_MESSAGE_PROXY" value="Backend Connection Failed"/>
+            </log>
+        </case>
+        <case regex="500100">
+            <property description="Response HTTP Code" name="HTTP_SC" scope="axis2" type="INTEGER" value="400"/>
+            <log separator=",">
+                <property name="ERROR_MESSAGE_PROXY" value="Validation Error"/>
+            </log>
+        </case>
+        <default>
+            <property description="Response HTTP Code" name="HTTP_SC" scope="axis2" type="INTEGER" value="500"/>
+            <log separator=",">
+                <property name="ERROR_MESSAGE_PROXY" value="Unknown Error"/>
+            </log>
+        </default>
+    </switch>
+    <payloadFactory media-type="json">
+        <format>{
+    "MsgRsHdr": {
+        "error": {
+            "Status": {
+                "StatusCode":$1,
+                "Severity": "ESB Runtime Error",
+                "StatusDesc": "$2",
+                "AdditionalStatus": {
+                    "ServerStatusCode": "$3",
+                    "Severity": "",
+                    "StatusDesc": "$4"
+                }
+            }
+       }
+    },
+    "body": null
+}</format>
+        <args>
+            <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+            <arg evaluator="xml" expression="get-property('ERROR_EXCEPTION')"/>
+            <arg evaluator="xml" expression="get-property('ERROR_CODE')"/>
+            <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+            <arg evaluator="xml" expression="get-property(&quot;SYSTEM_DATE&quot;,&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)"/>
+        </args>
+    </payloadFactory>
+    <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+    <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+    <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+    <respond/>
+</sequence>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ClaimsWorkAccidentInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="DEBUG" level="full" separator="[**ANTES  del call  llamado al endpoint***]"/>
+    <!-- <log level="custom">
+        <property expression="get-property('transport','Canal')" name="SCanal"/>
+        <property expression="get-property('transport','IdCorrelacionConsumidor')" name="SIdCorrelacionConsumidor"/>
+        <property expression="get-property('transport','IdTransaccion')" name="SIdTransaccion"/>
+        <property expression="get-property('transport','PeticionFecha')" name="SPeticionFecha"/>
+        <property expression="get-property('transport','Usuario')" name="SUsuario"/>
+    </log> -->
+    <propertyGroup>
+        <property expression="get-property('uri.var.claimnumber')" name="uri.var.claimnumber" scope="default" type="STRING"/>
+        <property expression="get-property('transport','IdCorrelacionConsumidor')" name="IdCorrelacionConsumidor" scope="default" type="STRING"/>
+        <property name="Content-Type" scope="transport" type="STRING" value="application/json"/>
+        <property name="Accept" scope="transport" type="STRING" value="application/json"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="GetWorkAccidentInformationEndpoint"/>
+    </call>
+    <log category="DEBUG" level="full" separator="[***Despues del call  llamado al endpoint***]"/>
+    <propertyGroup>
+        <property expression="json-eval($.Lista[0].ActividadEcomomica)" name="ActividadEcomomicaN" scope="default" type="STRING"/>
+        <property name="error" scope="default" type="STRING" value="null"/>
+    </propertyGroup>
+    <filter regex="^(0)$" source="json-eval($.Resultado)">
+        <then>
+            <property expression="get-property('correlation_id')" name="idTransaccion" scope="default" type="STRING"/>
+            <datamapper config="gov:datamapper/ReporteAccidente_to_WorkAccident.dmc" inputSchema="gov:datamapper/ReporteAccidente_to_WorkAccident_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/ReporteAccidente_to_WorkAccident_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/ReporteAccidente_to_WorkAccident_xsltStyleSheet.xml"/>
+            <log category="DEBUG" level="full" separator="[***Despues del datamapper**]"/>
+        </then>
+        <else>
+            <log level="full" separator="[***antes de sequenceFault payload**]"/>
+            <payloadFactory media-type="json">
+                <format>{
+	                    "MsgRsHdr": {
+	                        "error": {
+	                            "Status": {
+	                                "StatusCode": 200,
+	                                "Severity": null,
+	                                "StatusDesc": "$3",
+	                                "AdditionalStatus": {
+	                                    "ServerStatusCode": $2,
+	                                    "Severity": null,
+	                                    "Category": "Error Negocio",
+	                                    "StatusDesc": "$3"
+	                                }
+	                            }
+	                       }
+	                    },
+	                    "body": null
+	                }</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+                    <arg evaluator="xml" expression="$axis2:HTTP_SC"/>
+                    <arg evaluator="json" expression="$.Mensaje"/>
+                </args>
+            </payloadFactory>
+        </else>
+    </filter>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+    <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+    <respond/>
+</sequence>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ClaimsUpdateLockStatusInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="DEBUG" level="full" separator="[***PAYLOAD IN SEQ***]"/>
+    <propertyGroup>
+        <property expression="json-eval($.Contrato.Siniestro.FechaSiniestro)" name="FechaSiniestro" scope="default" type="STRING"/>
+        <property expression="json-eval($.Contrato.Siniestro.Radicado.FechaRadicado)" name="FechaRadicado" scope="default" type="STRING"/>
+        <property expression="concat(substring($ctx:FechaSiniestro, 1, 4), substring($ctx:FechaSiniestro, 6, 2), substring($ctx:FechaSiniestro, 9, 2))" name="FechaSiniestroTransformada" scope="default" type="STRING"/>
+        <property expression="concat(substring($ctx:FechaRadicado, 1, 4), substring($ctx:FechaRadicado, 6, 2), substring($ctx:FechaRadicado, 9, 2))" name="FechaRadicadoTransformada" scope="default" type="STRING"/>
+        <property expression="json-eval($.Contrato.Siniestro.ModificacionSiniestro.Hora)" name="HoraModificacionSiniestro" scope="default" type="STRING"/>
+        <property expression="json-eval($.Contrato.Siniestro.NotificacionSiniestro.HoraNotificacion)" name="HoraNotificacionSiniestro" scope="default" type="STRING"/>
+        <property expression="concat(substring($ctx:HoraModificacionSiniestro, 1, 2), substring($ctx:HoraModificacionSiniestro, 4, 2), substring($ctx:HoraModificacionSiniestro, 7, 2))" name="horaTransformadaMS" scope="default" type="STRING"/>
+        <property expression="concat(substring($ctx:HoraNotificacionSiniestro, 1, 2), substring($ctx:HoraNotificacionSiniestro, 4, 2), substring($ctx:HoraNotificacionSiniestro, 7, 2))" name="horaTransformadaNS" scope="default" type="STRING"/>
+    </propertyGroup>
+    <payloadFactory media-type="xml">
+        <format>
+            <soapenv:Envelope xmlns:con="http://consultardatosafiliacion.wsbeans.iseries/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                <soapenv:Header/>
+                <soapenv:Body>
+                    <ns0:vrpca114 xmlns:ns0="http://bloquear_siniestro.wsbeans.iseries/">
+                        <arg0 xmlns="">
+                            <PCABECERAWS>
+                                <IDSERVICIO>$1</IDSERVICIO>
+                                <USREJECUTA>$2</USREJECUTA>
+                            </PCABECERAWS>
+                            <PPRMENTWS>
+                                <ESARNSI>$3</ESARNSI>
+                                <ESARSEC>$4</ESARSEC>
+                                <ESARAFI>$5</ESARAFI>
+                                <ESARFAC>$6</ESARFAC>
+                                <ESARIEM>$7</ESARIEM>
+                                <ESARCAR>$8</ESARCAR>
+                                <ESARNAR>$9</ESARNAR>
+                                <ESARIND>$10</ESARIND>
+                                <EDEVNLO>$11</EDEVNLO>
+                                <EDEVCDE>$12</EDEVCDE>
+                                <EDEVOB1>$13</EDEVOB1>
+                                <EDEVOB2>$14</EDEVOB2>
+                                <EDEVOB3>$15</EDEVOB3>
+                                <EDEVAN1>$16</EDEVAN1>
+                                <EDEVAC1>$17</EDEVAC1>
+                                <EDEVAN2>$18</EDEVAN2>
+                                <EDEVAC2>$19</EDEVAC2>
+                                <EDEVEST>$20</EDEVEST>
+                                <EDEVFRA>$21</EDEVFRA>
+                                <EDEVCRA>$22</EDEVCRA>
+                                <EDEVTPR>$23</EDEVTPR>
+                                <EDEVCOR>$24</EDEVCOR>
+                                <EDEVFR1>$25</EDEVFR1>
+                                <EDEVFR2>$26</EDEVFR2>
+                                <EDEVFR3>$27</EDEVFR3>
+                                <EDEVFR4>$28</EDEVFR4>
+                                <EDEVFR5>$29</EDEVFR5>
+                                <EDEVFR6>$30</EDEVFR6>
+                                <EDEVFR7>$31</EDEVFR7>
+                                <EDEVUSR>$32</EDEVUSR>
+                                <EDEVFUS>$33</EDEVFUS>
+                                <EDEVHUS>$34</EDEVHUS>
+                                <EDEVUSM>$35</EDEVUSM>
+                                <EDEVFUM>$36</EDEVFUM>
+                                <EDEVHUM>$37</EDEVHUM>
+                            </PPRMENTWS>
+                        </arg0>
+                    </ns0:vrpca114>
+                </soapenv:Body>
+            </soapenv:Envelope>
+        </format>
+        <args>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Servicio.IdServicio"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Servicio.UsuarioEjecuta"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.IdSiniestro"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Secuencia.IdSecuencia"/>
+            <arg evaluator="json" expression="$.Contrato.IdContrato"/>
+            <arg evaluator="json" expression="$ctx:FechaSiniestroTransformada"/>
+            <arg evaluator="json" expression="$.Contrato.Cliente.Identificacion.Identificacion"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.CodigoARP"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.NitARP"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.EstadoBloqueoSiniestro"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.NumeroLote"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.CodigoDevolucion"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Observaciones.ObservacionPrimeraLinea"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Observaciones.ObservacionSegundaLinea"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Observaciones.ObservacionTerceraLinea"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Valores.ValorAnterior1"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Valores.ValorActual1"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Valores.ValorAnterior2"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Valores.ValorActual2"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Secuencia.EstadoSecuencia"/>
+            <arg evaluator="json" expression="$ctx:FechaRadicadoTransformada"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Radicado.CentroCostoRadicado"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.TipoPrestacion"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.Radicado.IdRadicado"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo1"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo2"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo3"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo4"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo5"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo6"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.AccidenteTrabajo.CamposFuturos.CampoFuturo7"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.NotificacionSiniestro.Usuario"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.NotificacionSiniestro.FechaNotificacion"/>
+            <arg evaluator="json" expression="$ctx:horaTransformadaNS"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.ModificacionSiniestro.Usuario"/>
+            <arg evaluator="json" expression="$.Contrato.Siniestro.ModificacionSiniestro.Fecha"/>
+            <arg evaluator="json" expression="$ctx:horaTransformadaMS"/>
+        </args>
+    </payloadFactory>
+    <log category="DEBUG" level="full" separator="[***DESPUES DEL PAYLOAD FACTORY***]"/>
+    <header action="remove" name="Action" scope="default"/>
+    <property action="remove" name="SOAPAction" scope="transport"/>
+    <header name="SOAPAction" scope="transport" value=""/>
+    <header name="Action" scope="default" value="http://bloquear_siniestro.wsbeans.iseries/Bloquear_SiniestroServices/vrpca114Request"/>
+    <call>
+        <endpoint key="UpdateLockStatusEndpoint"/>
+    </call>
+    <propertyGroup>
+        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+        <property expression="json-eval($.vrpca114Response.return.PPIEWS.CODRESPUESTA)" name="CODRESPUESTA" scope="default" type="STRING"/>
+    </propertyGroup>
+    <!-- <log level="full" separator="[***DESPUES DEL CALL Principal***]">
+        <property name="Response" value="API"/>
+    </log> -->
+    <filter xpath="$ctx:CODRESPUESTA = '0'">
+        <then>
+            <payloadFactory description="Build payload with error information" media-type="json">
+                <format>
+	            {
+					  "MsgRsHdr": {
+						"error": null
+					  },
+					  "body": {
+						"Siniestro": {	
+							"FechaTransaccion": "$1",
+							"MensajeCorto": "$2"						
+					}
+				}
+			}
+		    </format>
+                <args>
+                    <arg evaluator="json" expression="$.vrpca114Response.return.PPIEWS.FECHACONSULTA"/>
+                    <arg evaluator="json" expression="$.vrpca114Response.return.PPIEWS.MSGCORTO"/>
+                </args>
+            </payloadFactory>
+        </then>
+        <else>
+            <switch source="json-eval($.vrpca114Response.return.PPIEWS.CODRESPUESTA)">
+                <case regex="^(?!\s*$).+">
+                    <propertyGroup>
+                        <property expression="json-eval($.vrpca114Response.return.PPIEWS.MSGCORTO)" name="MSGCORTO" scope="default" type="STRING"/>
+                        <property expression="json-eval($.vrpca114Response.return.PPIEWS.MSGLARGO)" name="MSGLARGO" scope="default" type="STRING"/>
+                        <property expression="json-eval($.vrpca114Response.return.PPIEWS.CODRESPUESTA)" name="CODRESPUESTA" scope="default" type="STRING"/>
+                    </propertyGroup>
+                    <payloadFactory media-type="json">
+                        <format>{
+						    "MsgRsHdr": {
+						        "error": {
+						            "Status": {
+						                "StatusCode": 200,
+						                "Severity": "$2",
+						                "StatusDesc": "$3",
+						                "AdditionalStatus": {
+						                    "ServerStatusCode": $4,
+						                    "Severity": "$2",
+						                    "Category": "Error Negocio",
+						                    "StatusDesc": "$3"
+						                }
+						            }
+						       }
+						    },
+						    "body": null
+						}</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+                            <arg evaluator="xml" expression="get-property('MSGCORTO')"/>
+                            <arg evaluator="xml" expression="get-property('MSGLARGO')"/>
+                            <arg evaluator="xml" expression="get-property('CODRESPUESTA')"/>
+                        </args>
+                    </payloadFactory>
+                    <propertyGroup>
+                        <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+                        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                        <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+                    </propertyGroup>
+                </case>
+                <case regex="^\s*$">
+                    <property expression="//*[local-name()='faultstring']/text()" name="faultstring" scope="default" type="STRING"/>
+                    <payloadFactory media-type="json">
+                        <format>{
+						    "MsgRsHdr": {
+						        "error": {
+						            "Status": {
+						                "StatusCode": 200,
+						                "Severity": "null",
+						                "StatusDesc": "La consulta no esta disponible por el momento, por favor intente màs tarde",
+						                "AdditionalStatus": {
+						                    "ServerStatusCode": 500,
+						                    "Severity": "null",
+						                    "Category": "Error Técnico",
+						                    "StatusDesc": "$1"
+						                }
+						            }
+						       }
+						    },
+						    "body": null
+						}</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('faultstring')"/>
+                        </args>
+                    </payloadFactory>
+                    <propertyGroup>
+                        <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+                        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                        <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+                    </propertyGroup>
+                </case>
+                <default>
+                    <log category="DEBUG" level="full"/>
+                </default>
+            </switch>
+        </else>
+    </filter>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+    <respond description="Send result to the client"/>
+</sequence>

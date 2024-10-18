@@ -1,0 +1,46 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+var count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044 = 0;
+outputroot =  {};
+outputroot.MsgRsHdr =  {};
+outputroot.MsgRsHdr.error = null;
+outputroot.body =  {};
+outputroot.body.results =  [];
+
+for(i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044 in inputroot.Lista){
+outputroot.body.results[count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044] =  {};
+outputroot.body.results[count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].Cedula = inputroot.Lista[i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].Cedula;
+outputroot.body.results[count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].FechaAccidente = inputroot.Lista[i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].FechaAccidente;
+outputroot.body.results[count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].NombreEmpleado = inputroot.Lista[i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].NombreEmpleado;
+outputroot.body.results[count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].NroAfiliacion = removeDecimal(inputroot.Lista[i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].NroAfiliacion);
+outputroot.body.results[count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].NroSiniestro =  removeDecimal2(inputroot.Lista[i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044].NroSiniestro);
+
+count_i_Lista_c49306f9_50bf_4d3f_82c0_9889c332f044++;
+}
+return outputroot;
+};
+
+
+
+
+
+
+
+
+ removeDecimal2 = function(inputNumber) {
+    // Convertir el número de entrada a una cadena y eliminar el punto decimal
+    var stringWithoutDecimal = String(inputNumber).replace('.', '');
+    // Convertir la cadena resultante nuevamente a un número entero
+    var integerNumber = parseInt(stringWithoutDecimal);
+    // Devolver el número entero sin el punto decimal
+    return integerNumber;
+}
+removeDecimal = function(inputNumber) {
+    // Convertir el número de entrada a una cadena y eliminar el punto decimal
+    var stringWithoutDecimal = String(inputNumber).replace('.', '');
+    // Convertir la cadena resultante nuevamente a un número entero
+    var integerNumber = parseInt(stringWithoutDecimal);
+    // Devolver el número entero sin el punto decimal
+    return integerNumber;
+}

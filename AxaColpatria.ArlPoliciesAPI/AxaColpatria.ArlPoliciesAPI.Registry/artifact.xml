@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="vrpca114JSON_to_vrpca114XML" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpca114JSON_to_vrpca114XML.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpca114JSON_to_vrpca114XML_inputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpca114JSON_to_vrpca114XML_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpca114JSON_to_vrpca114XML_outputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpca114JSON_to_vrpca114XML_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpca114JSON_to_vrpca114XML_xsltStyleSheet" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpca114JSON_to_vrpca114XML_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ReporteAccidente_to_WorkAccident" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ReporteAccidente_to_WorkAccident.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ReporteAccidente_to_WorkAccident_inputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ReporteAccidente_to_WorkAccident_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ReporteAccidente_to_WorkAccident_outputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ReporteAccidente_to_WorkAccident_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ReporteAccidente_to_WorkAccident_xsltStyleSheet" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ReporteAccidente_to_WorkAccident_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="utf8_xslt" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>utf8.xslt</file>
+            <path>/_system/governance/siniestroarl/xslt</path>
+            <mediaType>application/xslt+xml</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ConsultaSiniestroPorLegalizar_to_claimsLegalizations" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConsultaSiniestroPorLegalizar_to_claimsLegalizations.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ConsultaSiniestroPorLegalizar_to_claimsLegalizations_inputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConsultaSiniestroPorLegalizar_to_claimsLegalizations_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ConsultaSiniestroPorLegalizar_to_claimsLegalizations_outputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConsultaSiniestroPorLegalizar_to_claimsLegalizations_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="ConsultaSiniestroPorLegalizar_to_claimsLegalizations_xsltStyleSheet" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConsultaSiniestroPorLegalizar_to_claimsLegalizations_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpcc105ResponseXML_To_vrpcc105ResponseJson" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpcc105ResponseXML_To_vrpcc105ResponseJson.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpcc105ResponseXML_To_vrpcc105ResponseJson_inputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpcc105ResponseXML_To_vrpcc105ResponseJson_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpcc105ResponseXML_To_vrpcc105ResponseJson_outputSchema" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpcc105ResponseXML_To_vrpcc105ResponseJson_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="vrpcc105ResponseXML_To_vrpcc105ResponseJson_xsltStyleSheet" groupId="com.axa.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>vrpcc105ResponseXML_To_vrpcc105ResponseJson_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+</artifacts>

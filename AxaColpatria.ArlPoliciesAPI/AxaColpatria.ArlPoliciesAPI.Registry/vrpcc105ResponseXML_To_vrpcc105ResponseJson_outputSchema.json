@@ -1,0 +1,89 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "outputType" : "JSON",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "MsgRsHdr" : {
+      "id" : "http://wso2jsonschema.org/MsgRsHdr",
+      "type" : "object",
+      "properties" : {
+        "error" : {
+          "id" : "http://wso2jsonschema.org/MsgRsHdr/error",
+          "type" : "number",
+          "nullable" : "true"
+        }
+      }
+    },
+    "body" : {
+      "id" : "http://wso2jsonschema.org/body",
+      "type" : "object",
+      "properties" : {
+        "Consulta" : {
+          "id" : "http://wso2jsonschema.org/body/Consulta",
+          "type" : "object",
+          "properties" : {
+            "FechaConsulta" : {
+              "id" : "http://wso2jsonschema.org/body/Consulta/FechaConsulta",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "MensajeLargo" : {
+              "id" : "http://wso2jsonschema.org/body/Consulta/MensajeLargo",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ConteoDatos" : {
+              "id" : "http://wso2jsonschema.org/body/Consulta/ConteoDatos",
+              "type" : "string",
+              "nullable" : "true"
+            }
+          }
+        },
+        "Empresas" : {
+          "id" : "http://wso2jsonschema.org/body/results",
+          "type" : "array",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/body/results/0",
+            "type" : "object",
+            "properties" : {
+              "Empresa" : {
+                "id" : "http://wso2jsonschema.org/body/results/0/Empresa",
+                "type" : "object",
+                "properties" : {
+                  "Identificacion" : {
+                    "id" : "http://wso2jsonschema.org/body/results/0/Empresa/Identificacion",
+                    "type" : "object",
+                    "properties" : {
+                      "NumeroIdentificacion" : {
+                        "id" : "http://wso2jsonschema.org/body/results/0/Empresa/Identificacion/NumeroIdentificacion",
+                        "type" : "string",
+                        "nullable" : "true"
+                      }
+                    }
+                  },
+                  "RazonSocial" : {
+                    "id" : "http://wso2jsonschema.org/body/results/0/Empresa/RazonSocial",
+                    "type" : "string",
+                    "nullable" : "true"
+                  },
+                  "NumeroAfiliacion" : {
+                    "id" : "http://wso2jsonschema.org/body/results/0/Empresa/NumeroAfiliacion",
+                    "type" : "string",
+                    "nullable" : "true"
+                  },
+                  "TipoVinculacion" : {
+                    "id" : "http://wso2jsonschema.org/body/results/0/Empresa/TipoVinculacion",
+                    "type" : "string",
+                    "nullable" : "true"
+                  }
+                }
+              }
+            }
+          } ]
+        }
+      }
+    }
+  }
+}

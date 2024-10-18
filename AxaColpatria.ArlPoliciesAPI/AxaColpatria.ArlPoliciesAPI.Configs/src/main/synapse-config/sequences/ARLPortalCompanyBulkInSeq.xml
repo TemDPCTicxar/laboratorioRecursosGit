@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ARLPortalCompanyBulkInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <call>
+        <endpoint key="ARLPortalCompanyBulkMiEndpoint"/>
+    </call>
+    <log level="full" separator="[***Dsepues del Call ARLPortalCompanyBulk***]"/>
+    <respond/>
+</sequence>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="PatchSpendingPreventionFaultSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="ERROR" level="full">
+        <property name="SeqName" value="PatchSpendingPreventionFaultSequence"/>
+    </log>
+    <filter regex="false" source="boolean(get-property('ERROR_CODE'))">
+        <then>
+            <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+            <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Petición incorrecta"/>
+            <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Tecnico"/>
+            <property name="ERROR_CODE" scope="default" type="INTEGER" value="400"/>
+        </then>
+        <else>
+            <property name="categoria" scope="default" type="STRING" value="Error Tenico"/>
+            <switch description="" source="get-property('ERROR_CODE')" xmlns:ns="http://org.apache.synapse/xsd">
+                <case regex="0">
+                    <property name="ERROR_CODE" scope="default" type="INTEGER" value="200"/>
+                    <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Petición incorrecta"/>
+                    <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Tecnico"/>
+                    <log separator=",">
+                        <property name="ERROR_MESSAGE_PROXY" value="Malformed Message"/>
+                    </log>
+                </case>
+                <case regex="101508|101504">
+                    <property name="ERROR_CODE" scope="default" type="INTEGER" value="200"/>
+                    <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Tiempo de espera superado en la conexion con el Backend"/>
+                    <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Tecnico"/>
+                    <log separator=",">
+                        <property name="ERROR_MESSAGE_PROXY" value="Timeout Backend Connection"/>
+                    </log>
+                </case>
+                <case regex="101503|101505|101506|101507|101509|101510|303001|101500">
+                    <property name="ERROR_CODE" scope="default" type="INTEGER" value="200"/>
+                    <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Error interno del servidor"/>
+                    <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Tecnico"/>
+                    <log separator=",">
+                        <property name="ERROR_MESSAGE_PROXY" value="Backend Connection Failed"/>
+                    </log>
+                </case>
+                <case regex="500100">
+                    <property name="ERROR_CODE" scope="default" type="INTEGER" value="200"/>
+                    <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Errores de validacion"/>
+                    <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Tecnico"/>
+                    <log separator=",">
+                        <property name="ERROR_MESSAGE_PROXY" value="Validation Error"/>
+                    </log>
+                </case>
+                <default>
+                    <filter regex="Error Tecnico" source="get-property('ERROR_EXCEPTION')">
+                        <then>
+                            <propertyGroup>
+                                <property name="ERROR_CODE" scope="default" type="INTEGER" value="200"/>
+                                <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Tecnico"/>
+                                <property name="ERROR_MESSAGE" scope="default" type="STRING" value="Error interno del servidor"/>
+                            </propertyGroup>
+                            <log separator=",">
+                                <property name="ERROR_MESSAGE_PROXY" value="Unknown Error"/>
+                            </log>
+                        </then>
+                        <else>
+                            <property name="ERROR_EXCEPTION" scope="default" type="STRING" value="Error Negocio"/>
+                        </else>
+                    </filter>
+                </default>
+            </switch>
+        </else>
+    </filter>
+    <payloadFactory media-type="json">
+        <format>{&#xd;
+    "MsgRsHdr": {&#xd;
+        "error": {&#xd;
+            "Status": {&#xd;
+				"StatusCode": 200,&#xd;
+				"Severity": null,&#xd;
+				"StatusDesc": "La consulta no está disponible por el momento, por favor intente más tarde",&#xd;
+				"AdditionalStatus": {&#xd;
+					"ServerStatusCode": $3,&#xd;
+					"Category": "Error Tecnico",&#xd;
+					"StatusDesc": "$4"&#xd;
+				}&#xd;
+            }&#xd;
+       }&#xd;
+    },&#xd;
+    "body": null&#xd;
+}</format>
+        <args>
+            <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+            <arg evaluator="xml" expression="get-property('ERROR_EXCEPTION')"/>
+            <arg evaluator="xml" expression="get-property('ERROR_CODE')"/>
+            <arg evaluator="xml" expression="get-property('ERROR_MESSAGE')"/>
+            <arg evaluator="xml" expression="get-property(&quot;SYSTEM_DATE&quot;,&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)"/>
+        </args>
+    </payloadFactory>
+    <property action="remove" name="NO_ENTITY_BODY" scope="axis2"/>
+    <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+    <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+    <respond/>
+</sequence>

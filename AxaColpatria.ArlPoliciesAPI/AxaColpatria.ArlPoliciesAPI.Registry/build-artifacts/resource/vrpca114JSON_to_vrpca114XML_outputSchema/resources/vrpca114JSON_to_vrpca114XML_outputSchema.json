@@ -1,0 +1,195 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "outputType" : "XML",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "vrpca114",
+  "type" : "object",
+  "properties" : {
+    "arg0" : {
+      "id" : "http://wso2jsonschema.org/arg0",
+      "type" : "object",
+      "properties" : {
+        "PCABECERAWS" : {
+          "id" : "http://wso2jsonschema.org/arg0/PCABECERAWS",
+          "type" : "object",
+          "properties" : {
+            "IDSERVICIO" : {
+              "id" : "http://wso2jsonschema.org/arg0/PCABECERAWS/IDSERVICIO",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "USREJECUTA" : {
+              "id" : "http://wso2jsonschema.org/arg0/PCABECERAWS/USREJECUTA",
+              "type" : "string",
+              "nullable" : "true"
+            }
+          }
+        },
+        "PPRMENTWS" : {
+          "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS",
+          "type" : "object",
+          "properties" : {
+            "ESARNSI" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARNSI",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARSEC" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARSEC",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARAFI" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARAFI",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARFAC" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARFAC",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARIEM" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARIEM",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARCAR" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARCAR",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARNAR" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARNAR",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "ESARIND" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/ESARIND",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVNLO" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVNLO",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVCDE" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVCDE",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVOB1" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVOB1",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVOB2" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVOB2",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVOB3" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVOB3",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVAN1" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVAN1",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVAC1" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVAC1",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVAN2" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVAN2",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVAC2" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVAC2",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVEST" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVEST",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFRA" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFRA",
+              "type" : "number",
+              "nullable" : "true"
+            },
+            "EDEVCRA" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVCRA",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVTPR" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVTPR",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVCOR" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVCOR",
+              "type" : "number"
+            },
+            "EDEVFR1" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR1",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFR2" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR2",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFR3" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR3",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFR4" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR4",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFR5" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR5",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFR6" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR6",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVFR7" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVFR7",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVHUS" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVHUS",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "EDEVHUM" : {
+              "id" : "http://wso2jsonschema.org/arg0/PPRMENTWS/EDEVHUM",
+              "type" : "string",
+              "nullable" : "true"
+            }
+          }
+        }
+      }
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "ns0",
+    "url" : "http://bloquear_siniestro.wsbeans.iseries/"
+  } ]
+}

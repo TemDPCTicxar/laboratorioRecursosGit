@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ARLPortalCompanyGetInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property expression="get-property('uri.var.idType')" name="idType"/>
+        <property expression="get-property('uri.var.idNumber')" name="idNumber"/>
+        <property expression="get-property('uri.var.affiliationNumber')" name="affiliationNumber"/>
+    </log>
+    <property expression="get-property('uri.var.idType')" name="idType" scope="default" type="STRING"/>
+    <property expression="get-property('uri.var.idNumber')" name="idNumber" scope="default" type="STRING"/>
+    <property expression="get-property('uri.var.affiliationNumber')" name="affiliationNumber" scope="default" type="STRING"/>
+    <call>
+        <endpoint key="ARLPortalCompanyGetMiEndpoint"/>
+    </call>
+    <log level="full" separator="[***Dsepues del Call ARLPortalCompany***]"/>
+    <respond/>
+</sequence>

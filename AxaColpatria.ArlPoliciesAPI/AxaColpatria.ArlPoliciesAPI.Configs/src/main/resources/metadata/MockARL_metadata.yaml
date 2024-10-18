@@ -1,0 +1,11 @@
+---
+key: "MockARL-1.0.0"
+name : "MockARL"
+displayName : "MockARL"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/mockarl"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

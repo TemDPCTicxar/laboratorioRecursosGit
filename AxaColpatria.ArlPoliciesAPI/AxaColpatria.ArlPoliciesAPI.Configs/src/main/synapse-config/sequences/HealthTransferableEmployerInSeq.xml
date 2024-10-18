@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="HealthTransferableEmployerInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full" separator="[**IN SEQ healthtransferableemployer **]"/>
+    <call>
+        <endpoint key="HealthTransferableEmployerEndpoint"/>
+    </call>
+    <respond/>
+</sequence>

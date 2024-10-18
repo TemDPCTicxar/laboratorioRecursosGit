@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="CheckInvollmentInformationOutSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full">
+        <property expression="json-eval($)" name="RESPONSE BODY SAT"/>
+    </log>
+    <propertyGroup description="Propety que afectan el flujo de salida">
+        <property expression="get-property('axis2','HTTP_SC')" name="AXA_ERROR_HTTP_SC1" scope="default" type="STRING"/>
+        <property name="HTTP_SC" scope="axis2" type="INTEGER" value="200"/>
+        <property expression="json-eval($)" name="cuerpo" scope="default" type="STRING"/>
+        <property expression="json-eval($.Status)" name="Status" scope="default" type="STRING"/>
+        <property expression="json-eval($.IdProcess)" name="IdProcess" scope="default" type="STRING"/>
+        <property expression="json-eval($.ProcessMessage)" name="ProcessMessage" scope="default" type="STRING"/>
+        <property expression="json-eval($.errors)" name="ErrorsJson" scope="default" type="STRING"/>
+        <property expression="json-eval($.status)" name="status" scope="default" type="STRING"/>
+    </propertyGroup>
+    <filter regex="true|false" source="get-property('Status')">
+        <then>
+            <filter regex="true" source="get-property('Status')">
+                <then>
+                    <payloadFactory media-type="json">
+                        <format>
+		
+						            {
+									    "MsgRsHdr": {
+									        "error": null
+									    },
+									    "body": {
+									        "results": [$1]
+									    }
+									}
+		
+						</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('cuerpo')"/>
+                        </args>
+                    </payloadFactory>
+                </then>
+                <else>
+                    <payloadFactory media-type="json">
+                        <format>
+									        	{
+											    "MsgRsHdr": {
+											        "error": {
+											            "Status": {
+											                "StatusCode": 999905,
+											                "Severity": "Error",
+											                "StatusDesc": "$1",
+											                "AdditionalStatus": {
+											                    "ServerStatusCode": 200, 
+											                    "Category": "Error de negocio",
+											                    "StatusDesc": "$1"
+											                }
+											            }
+											        }
+											    },
+											    "body": null
+											}
+		
+										</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('ProcessMessage')"/>
+                        </args>
+                    </payloadFactory>
+                </else>
+            </filter>
+        </then>
+        <else>
+            <payloadFactory media-type="json">
+                <format>
+							        	{
+									    "MsgRsHdr": {
+									        "error": {
+									            "Status": {
+									                "StatusCode": 999905,
+									                "Severity": "Error",
+									                "StatusDesc": "Archivo json no es válido",
+									                "AdditionalStatus": {
+									                    "ServerStatusCode": $1, 
+									                    "Category": "Error de negocio",
+									                    "StatusDesc": $2
+									                }
+									            }
+									        }
+									    },
+									    "body": null
+									}
+
+								</format>
+                <args>
+                    <arg evaluator="json" expression="$.status"/>
+                    <arg evaluator="xml" expression="get-property('ErrorsJson')"/>
+                </args>
+            </payloadFactory>
+        </else>
+    </filter>
+    <respond/>
+</sequence>

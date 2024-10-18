@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ClaimsEconomicCompensationInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="DEBUG" level="full" separator="[***PAYLOAD IN SEQ***]"/>
+    <!-- <log level="custom">
+        <property expression="get-property('uri.var.claimnumber')" name="ClaimNumber"/>
+    </log> -->
+    <propertyGroup description="Informacion que afecta al flujo">
+        <property expression="get-property('uri.var.claimnumber')" name="uri.var.claimnumber" scope="default" type="STRING"/>
+        <property name="Content-Type" scope="transport" type="STRING" value="application/json"/>
+        <property name="Accept" scope="transport" type="STRING" value="application/json"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="EconomicCompensationEndPoint"/>
+    </call>
+    <log category="DEBUG" level="full" separator="[***DESPUES DEL CALL IN SEQ***]"/>
+    <propertyGroup description="Informacion que afecta al flujo">
+        <property expression="//Resultado" name="Resultado" scope="default" type="STRING"/>
+    </propertyGroup>
+    <filter regex="true" source="json-eval($.isDone)">
+        <then>
+            <payloadFactory media-type="json">
+                <format>
+                    {
+					    "MsgRsHdr": {
+					        "error": null
+					    },
+					    "body": {
+					        
+					        "results": $1            
+					    }
+					}
+                </format>
+                <args>
+                    <arg evaluator="json" expression="$"/>
+                </args>
+            </payloadFactory>
+        </then>
+        <else>
+            <payloadFactory media-type="json">
+                <format>{
+					    "MsgRsHdr": {
+					        "error": {
+					            "Status": {
+					                "StatusCode": 200,
+					                "Severity": null,
+					                "StatusDesc": "$2",
+					                "AdditionalStatus": {
+					                    "ServerStatusCode": $1,
+					                    "Severity": null,
+					                    "Category": "Error Negocio",
+					                    "StatusDesc": "$2"
+					                }
+					            }
+					       }
+					    },
+					    "body": null
+					}</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('axis2','HTTP_SC')"/>
+                    <arg evaluator="json" expression="$.Mensaje"/>
+                </args>
+            </payloadFactory>
+        </else>
+    </filter>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="200"/>
+    <respond/>
+</sequence>

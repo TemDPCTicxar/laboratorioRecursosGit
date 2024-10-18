@@ -1,0 +1,78 @@
+map_S_root_S_vrpca114 = function(){ 
+var outputvrpca114={};
+
+outputvrpca114 =  {};
+outputvrpca114.arg0 =  {};
+outputvrpca114.arg0.PCABECERAWS =  {};
+outputvrpca114.arg0.PCABECERAWS.IDSERVICIO = inputroot.IdServicio;
+outputvrpca114.arg0.PCABECERAWS.USREJECUTA = inputroot.UsuarioEjecuta;
+outputvrpca114.arg0.PPRMENTWS =  {};
+outputvrpca114.arg0.PPRMENTWS.ESARNSI = inputroot.IdSiniestro;
+outputvrpca114.arg0.PPRMENTWS.ESARSEC = inputroot.IdSecuencia;
+outputvrpca114.arg0.PPRMENTWS.ESARAFI = inputroot.IdContrato;
+outputvrpca114.arg0.PPRMENTWS.ESARFAC = inputroot.FechaSiniestro;
+outputvrpca114.arg0.PPRMENTWS.ESARIEM = inputroot.Identificacion;
+outputvrpca114.arg0.PPRMENTWS.ESARCAR = inputroot.CodigoARP;
+outputvrpca114.arg0.PPRMENTWS.ESARNAR = inputroot.NitARP;
+outputvrpca114.arg0.PPRMENTWS.ESARIND = inputroot.EstadoBloqueoSiniestro;
+outputvrpca114.arg0.PPRMENTWS.EDEVNLO = inputroot.NumeroLote;
+outputvrpca114.arg0.PPRMENTWS.EDEVCDE = inputroot.CodigoDevolucion;
+outputvrpca114.arg0.PPRMENTWS.EDEVOB1 = inputroot.ObservacionPrimeraLinea;
+outputvrpca114.arg0.PPRMENTWS.EDEVOB2 = inputroot.ObservacionSegundaLinea;
+outputvrpca114.arg0.PPRMENTWS.EDEVOB3 = inputroot.ObservacionTerceraLinea;
+outputvrpca114.arg0.PPRMENTWS.EDEVAN1 = inputroot.ValorAnterior1;
+outputvrpca114.arg0.PPRMENTWS.EDEVAC1 = inputroot.ValorActual1;
+outputvrpca114.arg0.PPRMENTWS.EDEVAN2 = inputroot.ValorAnterior2;
+outputvrpca114.arg0.PPRMENTWS.EDEVAC2 = inputroot.ValorActual2;
+outputvrpca114.arg0.PPRMENTWS.EDEVEST = inputroot.EstadoSecuencia;
+outputvrpca114.arg0.PPRMENTWS.EDEVFRA = Number(inputroot.FechaRadicado);
+outputvrpca114.arg0.PPRMENTWS.EDEVCRA = inputroot.CentroCostoRadicado;
+outputvrpca114.arg0.PPRMENTWS.EDEVTPR = inputroot.TipoPrestacion;
+outputvrpca114.arg0.PPRMENTWS.EDEVCOR = Number(inputroot.IdRadicadoIdRadicado);
+outputvrpca114.arg0.PPRMENTWS.EDEVFR1 = inputroot.CampoFuturo1;
+outputvrpca114.arg0.PPRMENTWS.EDEVFR2 = inputroot.CampoFuturo2;
+outputvrpca114.arg0.PPRMENTWS.EDEVFR3 = inputroot.CampoFuturo3;
+outputvrpca114.arg0.PPRMENTWS.EDEVFR4 = inputroot.CampoFuturo4;
+outputvrpca114.arg0.PPRMENTWS.EDEVFR5 = inputroot.CampoFuturo5;
+outputvrpca114.arg0.PPRMENTWS.EDEVFR6 = inputroot.CampoFuturo6;
+outputvrpca114.arg0.PPRMENTWS.EDEVFR7 = inputroot.CampoFuturo7;
+outputvrpca114.arg0.PPRMENTWS.EDEVHUS = inputroot.ModificacionSiniestroFecha;
+outputvrpca114.arg0.PPRMENTWS.EDEVHUM = inputroot.ModificacionSiniestroHora;
+return outputvrpca114;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

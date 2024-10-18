@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/mockarl" name="MockAPIArl" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="full" separator="[***MOCK API***]"/>
+            <log level="custom">
+                <property expression="get-property('transport','encode')" name="encode"/>
+            </log>
+            <payloadFactory media-type="xml">
+                <format>
+                    <ns2:vrpcc105Response xmlns:ns2="http://consultardatosafiliacion.wsbeans.iseries/">
+                        <return>
+                            <NROELEM_ARR1>1</NROELEM_ARR1>
+                            <PPIEWS>
+                                <CODRESPUESTA>0</CODRESPUESTA>
+                                <FECHACONSULTA>2024-03-14T12:03:45.100-05:00</FECHACONSULTA>
+                                <MSGCORTO>Transacción exitosa</MSGCORTO>
+                                <MSGLARGO>La petición realizada se ejecutó de manera satisfactoria</MSGLARGO>
+                            </PPIEWS>
+                            <PPRMSALWS>
+                                <SCORES>0</SCORES>
+                            </PPRMSALWS>
+                            <PPRMSALWS_ARR1>
+                                <ARRNUAFI>139285</ARRNUAFI>
+                                <ARRNUDOC>890801339</ARRNUDOC>
+                                <ARRRASOC>TREFILERIA S.A.S.</ARRRASOC>
+                                <ARRTIVIN>EMP</ARRTIVIN>
+                            </PPRMSALWS_ARR1>
+                        </return>
+                    </ns2:vrpcc105Response>
+                </format>
+                <args/>
+            </payloadFactory>
+            <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="EnrollmentInSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full" separator="[**IN SEQ Enrollment **]"/>
+    <call>
+        <endpoint key="EnrollmentEndpoint"/>
+    </call>
+    <respond/>
+</sequence>

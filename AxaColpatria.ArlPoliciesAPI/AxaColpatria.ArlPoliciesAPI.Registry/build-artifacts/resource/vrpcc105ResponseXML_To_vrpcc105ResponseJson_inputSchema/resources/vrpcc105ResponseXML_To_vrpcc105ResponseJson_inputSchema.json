@@ -1,0 +1,91 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "inputType" : "XML",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "ns2:vrpcc105Response",
+  "type" : "object",
+  "properties" : {
+    "return" : {
+      "id" : "http://wso2jsonschema.org/return",
+      "type" : "object",
+      "properties" : {
+        "NROELEM_ARR1" : {
+          "id" : "http://wso2jsonschema.org/return/NROELEM_ARR1",
+          "type" : "string",
+          "nullable" : "true"
+        },
+        "PPIEWS" : {
+          "id" : "http://wso2jsonschema.org/return/PPIEWS",
+          "type" : "object",
+          "properties" : {
+            "CODRESPUESTA" : {
+              "id" : "http://wso2jsonschema.org/return/PPIEWS/CODRESPUESTA",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "FECHACONSULTA" : {
+              "id" : "http://wso2jsonschema.org/return/PPIEWS/FECHACONSULTA",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "MSGCORTO" : {
+              "id" : "http://wso2jsonschema.org/return/PPIEWS/MSGCORTO",
+              "type" : "string",
+              "nullable" : "true"
+            },
+            "MSGLARGO" : {
+              "id" : "http://wso2jsonschema.org/return/PPIEWS/MSGLARGO",
+              "type" : "string",
+              "nullable" : "true"
+            }
+          }
+        },
+        "PPRMSALWS" : {
+          "id" : "http://wso2jsonschema.org/return/PPRMSALWS",
+          "type" : "object",
+          "properties" : {
+            "SCORES" : {
+              "id" : "http://wso2jsonschema.org/return/PPRMSALWS/SCORES",
+              "type" : "string",
+              "nullable" : "true"
+            }
+          }
+        },
+        "PPRMSALWS_ARR1" : {
+          "id" : "http://wso2jsonschema.org/return/PPRMSALWS_ARR1",
+          "type" : "array",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0",
+            "type" : "object",
+            "properties" : {
+              "ARRNUAFI" : {
+                "id" : "http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRNUAFI",
+                "type" : "string",
+                "nullable" : "true"
+              },
+              "ARRNUDOC" : {
+                "id" : "http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRNUDOC",
+                "type" : "string",
+                "nullable" : "true"
+              },
+              "ARRRASOC" : {
+                "id" : "http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRRASOC",
+                "type" : "string",
+                "nullable" : "true"
+              },
+              "ARRTIVIN" : {
+                "id" : "http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRTIVIN",
+                "type" : "string",
+                "nullable" : "true"
+              }
+            }
+          } ]
+        }
+      }
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "ns2",
+    "url" : "http://consultardatosafiliacion.wsbeans.iseries/"
+  } ]
+}

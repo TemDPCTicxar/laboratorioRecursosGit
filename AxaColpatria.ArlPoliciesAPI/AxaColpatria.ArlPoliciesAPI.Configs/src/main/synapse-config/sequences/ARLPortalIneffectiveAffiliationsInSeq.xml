@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ARLPortalIneffectiveAffiliationsInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property expression="get-property('uri.var.affiliation')" name="affiliation"/>
+    </log>
+    <property expression="get-property('uri.var.affiliation')" name="affiliation" scope="default" type="STRING"/>
+    <call>
+        <endpoint key="ARLPortalRegisterNewNoCashIncomePersonalMiEndpoint"/>
+    </call>
+    <log separator="[***Dsepues del Call***]"/>
+    <respond/>
+</sequence>

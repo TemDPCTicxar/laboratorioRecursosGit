@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="ns2:vrpcc105Response" schemaDataType="OBJECT" level="1">
+      <node name="return" schemaDataType="OBJECT" level="2">
+        <node name="NROELEM_ARR1" schemaDataType="NUMBER" level="3">
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/return/NROELEM_ARR1"/>
+          <properties key="type" value="string"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.2/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="PPIEWS" schemaDataType="OBJECT" level="3">
+          <node name="CODRESPUESTA" schemaDataType="NUMBER" level="4">
+            <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPIEWS/CODRESPUESTA"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="FECHACONSULTA" schemaDataType="STRING" level="4">
+            <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPIEWS/FECHACONSULTA"/>
+            <properties key="type" value="string"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.0/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="MSGCORTO" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPIEWS/MSGCORTO"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="MSGLARGO" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPIEWS/MSGLARGO"/>
+            <properties key="type" value="string"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.0/@node.1/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/return/PPIEWS"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="PPRMSALWS" schemaDataType="OBJECT" level="3">
+          <node name="SCORES" schemaDataType="NUMBER" level="4">
+            <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS/SCORES"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="PPRMSALWS_ARR1" level="3">
+          <node name="ARRNUAFI" schemaDataType="NUMBER" level="4">
+            <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRNUAFI"/>
+            <properties key="type" value="string"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.1/@node.0/@node.2/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="ARRNUDOC" schemaDataType="NUMBER" level="4">
+            <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRNUDOC"/>
+            <properties key="type" value="string"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.1/@node.0/@node.0/@node.0/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="ARRRASOC" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRRASOC"/>
+            <properties key="type" value="string"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.1/@node.0/@node.1/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="ARRTIVIN" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRTIVIN"/>
+            <properties key="type" value="string"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@node.1/@node.0/@node.3/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="false"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/return/PPRMSALWS_ARR1"/>
+          <properties key="type" value="array"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/return"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{NROELEM_ARR1={id=http://wso2jsonschema.org/return/NROELEM_ARR1, type=number}, PPIEWS={id=http://wso2jsonschema.org/return/PPIEWS, type=object, properties={CODRESPUESTA={id=http://wso2jsonschema.org/return/PPIEWS/CODRESPUESTA, type=number}, FECHACONSULTA={id=http://wso2jsonschema.org/return/PPIEWS/FECHACONSULTA, type=string}, MSGCORTO={id=http://wso2jsonschema.org/return/PPIEWS/MSGCORTO, type=string}, MSGLARGO={id=http://wso2jsonschema.org/return/PPIEWS/MSGLARGO, type=string}}}, PPRMSALWS={id=http://wso2jsonschema.org/return/PPRMSALWS, type=object, properties={SCORES={id=http://wso2jsonschema.org/return/PPRMSALWS/SCORES, type=number}}}, PPRMSALWS_ARR1={id=http://wso2jsonschema.org/return/PPRMSALWS_ARR1, type=array, items=[{id=http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0, type=object, properties={ARRNUAFI={id=http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRNUAFI, type=number}, ARRNUDOC={id=http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRNUDOC, type=number}, ARRRASOC={id=http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRRASOC, type=string}, ARRTIVIN={id=http://wso2jsonschema.org/return/PPRMSALWS_ARR1/0/ARRTIVIN, type=string}}}]}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=ns2, url=http://consultardatosafiliacion.wsbeans.iseries/}"/>
+      <properties key="namespaces" value="{prefix=ns2, url=http://consultardatosafiliacion.wsbeans.iseries/}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" schemaDataType="OBJECT" level="1">
+      <node name="MsgRsHdr" schemaDataType="OBJECT" level="2">
+        <node name="error" schemaDataType="STRING" level="3">
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="id" value="http://wso2jsonschema.org/MsgRsHdr/error"/>
+          <properties key="type" value="number"/>
+          <outNode/>
+          <inNode incomingLink="//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/MsgRsHdr"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="body" schemaDataType="OBJECT" level="2">
+        <node name="Consulta" schemaDataType="OBJECT" level="3">
+          <node name="FechaConsulta" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/Consulta/FechaConsulta"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.1/@node.1/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="MensajeLargo" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/Consulta/MensajeLargo"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.1/@node.3/@outNode/@outgoingLink.0"/>
+          </node>
+          <node name="ConteoDatos" schemaDataType="STRING" level="4">
+            <properties key="nullable" value="true"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/Consulta/ConteoDatos"/>
+            <properties key="type" value="string"/>
+            <outNode/>
+            <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+          </node>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/body/Consulta"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="Empresas" level="3">
+          <node name="Empresa" schemaDataType="OBJECT" level="4">
+            <node name="Identificacion" schemaDataType="OBJECT" level="5">
+              <node name="NumeroIdentificacion" schemaDataType="STRING" level="6">
+                <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+                <properties key="nullable" value="true"/>
+                <properties key="id" value="http://wso2jsonschema.org/body/results/0/Empresa/Identificacion/NumeroIdentificacion"/>
+                <properties key="type" value="string"/>
+                <outNode/>
+                <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.1/@outNode/@outgoingLink.0"/>
+              </node>
+              <properties key="type" value="object"/>
+              <properties key="id" value="http://wso2jsonschema.org/body/results/0/Empresa/Identificacion"/>
+              <properties key="nullable" value="false"/>
+              <properties key="properties_id" value="{NumeroIdentificacion={id=http://wso2jsonschema.org/body/results/0/Empresa/Identificacion/NumeroIdentificacion, type=string}}"/>
+              <outNode/>
+              <inNode/>
+            </node>
+            <node name="RazonSocial" schemaDataType="STRING" level="5">
+              <properties key="nullable" value="true"/>
+              <properties key="id" value="http://wso2jsonschema.org/body/results/0/Empresa/RazonSocial"/>
+              <properties key="type" value="string"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.2/@outNode/@outgoingLink.0"/>
+            </node>
+            <node name="NumeroAfiliacion" schemaDataType="STRING" level="5">
+              <properties key="nullable" value="true"/>
+              <properties key="id" value="http://wso2jsonschema.org/body/results/0/Empresa/NumeroAfiliacion"/>
+              <properties key="type" value="string"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.0/@outNode/@outgoingLink.0"/>
+            </node>
+            <node name="TipoVinculacion" schemaDataType="STRING" level="5">
+              <properties key="nullable" value="true"/>
+              <properties key="id" value="http://wso2jsonschema.org/body/results/0/Empresa/TipoVinculacion"/>
+              <properties key="type" value="string"/>
+              <outNode/>
+              <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.3/@outNode/@outgoingLink.0"/>
+            </node>
+            <properties key="type" value="object"/>
+            <properties key="id" value="http://wso2jsonschema.org/body/results/0/Empresa"/>
+            <properties key="nullable" value="false"/>
+            <properties key="properties_id" value="{Identificacion={id=http://wso2jsonschema.org/body/results/0/Empresa/Identificacion, type=object, properties={NumeroIdentificacion={id=http://wso2jsonschema.org/body/results/0/Empresa/Identificacion/NumeroIdentificacion, type=string}}}, RazonSocial={id=http://wso2jsonschema.org/body/results/0/Empresa/RazonSocial, type=string}, NumeroAfiliacion={id=http://wso2jsonschema.org/body/results/0/Empresa/NumeroAfiliacion, type=string}, TipoVinculacion={id=http://wso2jsonschema.org/body/results/0/Empresa/TipoVinculacion, type=string}}"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="false"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/body/results/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/body/results"/>
+          <properties key="type" value="array"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/body"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{error={id=http://wso2jsonschema.org/MsgRsHdr/error, type=string}}"/>
+        <properties key="properties_id" value="{Consulta={id=http://wso2jsonschema.org/body/Consulta, type=object, properties={FechaConsulta={id=http://wso2jsonschema.org/body/Consulta/FechaConsulta, type=string}, MensajeLargo={id=http://wso2jsonschema.org/body/Consulta/MensajeLargo, type=string}, ConteoDatos={id=http://wso2jsonschema.org/body/Consulta/ConteoDatos, type=string}}}, results={id=http://wso2jsonschema.org/body/results, type=array, items=[{id=http://wso2jsonschema.org/body/results/0, type=object, properties={Empresa={id=http://wso2jsonschema.org/body/results/0/Empresa, type=object, properties={Identificacion={id=http://wso2jsonschema.org/body/results/0/Empresa/Identificacion, type=object, properties={NumeroIdentificacion={id=http://wso2jsonschema.org/body/results/0/Empresa/Identificacion/NumeroIdentificacion, type=string}}}, RazonSocial={id=http://wso2jsonschema.org/body/results/0/Empresa/RazonSocial, type=string}, NumeroAfiliacion={id=http://wso2jsonschema.org/body/results/0/Empresa/NumeroAfiliacion, type=string}, TipoVinculacion={id=http://wso2jsonschema.org/body/results/0/Empresa/TipoVinculacion, type=string}}}}}]}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+  <operators xsi:type="datamapper:Constant" defaultOutputConnectors="1" operatorType="CONSTANT" constantValue="null" type="NUMBER">
+    <basicContainer>
+      <leftContainer/>
+      <rightContainer>
+        <rightConnectors>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.0/@node.0/@inNode"/>
+          </outNode>
+        </rightConnectors>
+      </rightContainer>
+    </basicContainer>
+  </operators>
+</datamapper:DataMapperRoot>

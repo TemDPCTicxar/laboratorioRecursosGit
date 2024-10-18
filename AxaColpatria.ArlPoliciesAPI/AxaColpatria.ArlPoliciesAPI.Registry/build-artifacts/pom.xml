@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.axa</groupId>
+    <artifactId>AxaColpatria.ArlPoliciesAPI.Registry</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>com.axa</groupId>
+  <artifactId>AxaColpatria.ArlPoliciesAPI.Registry_module</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>AxaColpatria.ArlPoliciesAPI.Registry_module</name>
+  <description>AxaColpatria.ArlPoliciesAPI.Registry_module</description>
+  <modules>
+    <module>resource/vrpca114JSON_to_vrpca114XML</module>
+    <module>resource/vrpca114JSON_to_vrpca114XML_inputSchema</module>
+    <module>resource/vrpca114JSON_to_vrpca114XML_outputSchema</module>
+    <module>resource/vrpca114JSON_to_vrpca114XML_xsltStyleSheet</module>
+    <module>resource/ReporteAccidente_to_WorkAccident</module>
+    <module>resource/ReporteAccidente_to_WorkAccident_inputSchema</module>
+    <module>resource/ReporteAccidente_to_WorkAccident_outputSchema</module>
+    <module>resource/ReporteAccidente_to_WorkAccident_xsltStyleSheet</module>
+    <module>resource/utf8_xslt</module>
+    <module>resource/ConsultaSiniestroPorLegalizar_to_claimsLegalizations</module>
+    <module>resource/ConsultaSiniestroPorLegalizar_to_claimsLegalizations_inputSchema</module>
+    <module>resource/ConsultaSiniestroPorLegalizar_to_claimsLegalizations_outputSchema</module>
+    <module>resource/ConsultaSiniestroPorLegalizar_to_claimsLegalizations_xsltStyleSheet</module>
+    <module>resource/vrpcc105ResponseXML_To_vrpcc105ResponseJson</module>
+    <module>resource/vrpcc105ResponseXML_To_vrpcc105ResponseJson_inputSchema</module>
+    <module>resource/vrpcc105ResponseXML_To_vrpcc105ResponseJson_outputSchema</module>
+    <module>resource/vrpcc105ResponseXML_To_vrpcc105ResponseJson_xsltStyleSheet</module>
+  </modules>
+</project>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/arlpolicies" name="ArlPoliciesAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ClaimsRejectionreasonsInSequence" methods="GET" uri-template="/claims/rejectionreasons">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ClaimsRigthsInSequence" methods="GET" uri-template="/claims/rigths/{idtype}/{documentid}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ClaimsWorkAccidentInSequence" methods="GET" uri-template="/claims/workaccident/{claimnumber}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ClaimsEconomicCompensationInSequence" methods="PUT" uri-template="/claims/economiccompensation/{claimnumber}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ClaimsForLegalizationInSequence" methods="GET" uri-template="/claims/legalizations/{affiliationnumber}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ClaimsUpdateLockStatusInSequence" methods="PUT" uri-template="/claims/block">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="EnrollmentInSequence" methods="POST" uri-template="/enrollment">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="InvollmentInSequence" methods="POST" uri-template="/invollment">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="HealthTransferableEmployerInSeq" methods="GET" uri-template="/healthtransferableemployer">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="HealthDefaultDebtInSeq" methods="GET" uri-template="/healthdefaultdebt">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="CompleteEnrollmentsInSeq" methods="PUT" uri-template="/completeenrollments">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="CheckInvollmentInformationInSequence" methods="GET" uri-template="/customers/arl/{customeridtype}/{customerid}/affiliations?startdate={startdateVal}&amp;enddate={enddateVal}&amp;iscompany={iscompanyVal}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ConsultsSATCompanyAffiliationInSeq" methods="GET" uri-template="/consultaempresatrasladadasat?fechainicio={startdateVal}&amp;fechafin={enddateVal}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ConsultsSATCompanyTransferableInSeq" methods="GET" uri-template="/transferablecompaniessat">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ConsultsInfoSATCompanyAffiliationInSeq" methods="GET" uri-template="/companies/affiliations?tipodocumentoempleador={tipodocumentoVal}&amp;numerodocumentoempleador={numerodocumentVal}&amp;consecutivonitempleador={consecutivonitVal}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ConsultsArrearSATInseq" methods="GET" uri-template="/arrearssat">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalUpdateDocumentTypeNoveltyInSeq" methods="PATCH" uri-template="/employees/{idType}/{idNumber}/documentType">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalIneffectiveAffiliationsInSeq" methods="PUT" uri-template="/enrollments/{affiliation}/ineffectiveAffiliations">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalIneffectiveAffiliationsBulkInSeq" methods="POST" uri-template="/enrollments/{affiliation}/ineffectiveAffiliations/bulk">
+        <outSequence/>
+    </resource>
+    <resource methods="PATCH" uri-template="/arl/prevention">
+        <inSequence>
+            <sequence key="PatchSpendingPreventionInSequence"/>
+        </inSequence>
+        <outSequence>
+            <sequence key="PatchSpendingPreventionOutSequence"/>
+        </outSequence>
+        <faultSequence>
+            <sequence key="PatchSpendingPreventionFaultSequence"/>
+        </faultSequence>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalCompanyGetInSeq" methods="GET" uri-template="/customers/arl/validations/company/{idType}/{idNumber}/{affiliationNumber}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalCompanyGetInSeq" methods="GET" uri-template="/customers/arl/validations/company/{idType}/{idNumber}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalCompanyBulkInSeq" methods="POST" uri-template="/customers/arl/validations/company/bulk">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalEmployeeGetInSeq" methods="GET" uri-template="/customers/arl/validations/employee/{idType}/{idNumber}">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalEmployeeBulkInSeq" methods="POST" uri-template="/customers/arl/validations/employee/bulk">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalSelfEmployeeIngressInSeq" methods="POST" uri-template="/enrollment/{affiliation}/selfemployees">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalEmployeeIngressInSeq" methods="POST" uri-template="/enrollment/{affiliation}/employees">
+        <outSequence/>
+    </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalNoveltyRegisterInSeq" methods="PATCH" uri-template="/enrollment/{affiliation}/employees/novelties">
+        <outSequence/>
+    </resource>
+</api>

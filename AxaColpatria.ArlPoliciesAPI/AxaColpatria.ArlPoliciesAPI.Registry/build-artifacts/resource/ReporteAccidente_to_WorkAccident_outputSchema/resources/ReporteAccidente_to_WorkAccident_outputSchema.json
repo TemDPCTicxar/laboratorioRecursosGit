@@ -1,0 +1,729 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "outputType" : "JSON",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "MsgRsHdr" : {
+      "id" : "http://wso2jsonschema.org/MsgRsHdr",
+      "type" : "object",
+      "properties" : {
+        "error" : {
+          "id" : "http://wso2jsonschema.org/MsgRsHdr/error",
+          "type" : "number",
+          "nullable" : "true"
+        }
+      }
+    },
+    "body" : {
+      "id" : "http://wso2jsonschema.org/body",
+      "type" : "object",
+      "properties" : {
+        "Lista" : {
+          "id" : "http://wso2jsonschema.org/body/Lista",
+          "type" : "object",
+          "properties" : {
+            "Siniestro" : {
+              "id" : "http://wso2jsonschema.org/body/Lista/Siniestro",
+              "type" : "object",
+              "properties" : {
+                "ActividadEconomica" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/ActividadEconomica",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "Empresa" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa",
+                  "type" : "object",
+                  "properties" : {
+                    "Identificacion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/Identificacion",
+                      "type" : "object",
+                      "properties" : {
+                        "NumeroIdentificacion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/Identificacion/NumeroIdentificacion",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TipoDocumento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/Identificacion/TipoDocumento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        }
+                      }
+                    },
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "CentroTrabajo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/CentroTrabajo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "CodigoCiudad" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/CodigoCiudad",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "CodigoDepartamento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/CodigoDepartamento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Correo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/Correo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "CorreoPila" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/CorreoPila",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Direccion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/Direccion",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Fax" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/Fax",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "FechaIngreso" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/FechaIngreso",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "FechaRetiro" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/FechaRetiro",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "MismosDatosCentroTrabajo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/MismosDatosCentroTrabajo",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "RazonSocial" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/RazonSocial",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Orden" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/Orden",
+                          "type" : "boolean",
+                          "nullable" : "true"
+                        },
+                        "RepresentacionEmpresa" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/RepresentacionEmpresa",
+                          "type" : "boolean",
+                          "nullable" : "true"
+                        },
+                        "Telefono" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/Telefono",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Zona" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empresa/DatosBasicos/Zona",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "CTEmpresa" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa",
+                  "type" : "object",
+                  "properties" : {
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "ActividadEconomica" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/ActividadEconomica",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Ciudad" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/Ciudad",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Departamento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/Departamento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Direccion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/Direccion",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Fax" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/Fax",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Telefono" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/Telefono",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Zona" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CTEmpresa/DatosBasicos/Zona",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Empleado" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado",
+                  "type" : "object",
+                  "properties" : {
+                    "Identificacion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/Identificacion",
+                      "type" : "object",
+                      "properties" : {
+                        "Identificacion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/Identificacion/Identificacion",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TipoDocumento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/Identificacion/TipoDocumento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        }
+                      }
+                    },
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "ActividadEconomica" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/ActividadEconomica",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Cargo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Cargo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "CodigoCiudad" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/CodigoCiudad",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "CodigoDepartamento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/CodigoDepartamento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "CodigoAFP" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/CodigoAFP",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "CodigoEPS" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/CodigoEPS",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Direccion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Direccion",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Fax" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Fax",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "FechaNacimiento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/FechaNacimiento",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Genero" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Genero",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "JornadaTrabajo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/JornadaTrabajo",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Nombre" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Nombre",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Ocupacion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Ocupacion",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Salario" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Salario",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Telefono" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Telefono",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TiempoEmpresa" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/TiempoEmpresa",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TiempoOcupacion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/TiempoOcupacion",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TipoEmpleado" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/TipoEmpleado",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TipoVinculacion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/TipoVinculacion",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TipoVinculacionLaboral" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/TipoVinculacionLaboral",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "Zona" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Empleado/DatosBasicos/Zona",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "AgenteAccidente" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/AgenteAccidente",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "Responsable" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable",
+                  "type" : "object",
+                  "properties" : {
+                    "Identificacion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable/Identificacion",
+                      "type" : "object",
+                      "properties" : {
+                        "NumeroIdentificacion" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable/Identificacion/NumeroIdentificacion",
+                          "type" : "number",
+                          "nullable" : "true"
+                        },
+                        "TipoDocumento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable/Identificacion/TipoDocumento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        }
+                      }
+                    },
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "Cargo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable/DatosBasicos/Cargo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Nombre" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Responsable/DatosBasicos/Nombre",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "PrimerTestigo" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/PrimerTestigo",
+                  "type" : "object",
+                  "properties" : {
+                    "Identificacion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/PrimerTestigo/Identificacion",
+                      "type" : "object",
+                      "properties" : {
+                        "NumeroDocumento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/PrimerTestigo/Identificacion/NumeroDocumento",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    },
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/PrimerTestigo/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "Nombre" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/PrimerTestigo/DatosBasicos/Nombre",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Cargo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/PrimerTestigo/DatosBasicos/Cargo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "SegundoTestigo" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo",
+                  "type" : "object",
+                  "properties" : {
+                    "Identificacion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo/Identificacion",
+                      "type" : "object",
+                      "properties" : {
+                        "NumeroDocumento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo/Identificacion/NumeroDocumento",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "TipoDocumento" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo/Identificacion/TipoDocumento",
+                          "type" : "number",
+                          "nullable" : "true"
+                        }
+                      }
+                    },
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "Nombre" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo/DatosBasicos/Nombre",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Cargo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/SegundoTestigo/DatosBasicos/Cargo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Trabajador" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Trabajador",
+                  "type" : "object",
+                  "properties" : {
+                    "DatosBasicos" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Trabajador/DatosBasicos",
+                      "type" : "object",
+                      "properties" : {
+                        "Cargo" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Trabajador/DatosBasicos/Cargo",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "Labor" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Trabajador/DatosBasicos/Labor",
+                          "type" : "string",
+                          "nullable" : "true"
+                        },
+                        "LugarSalia" : {
+                          "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Trabajador/DatosBasicos/LugarSalia",
+                          "type" : "string",
+                          "nullable" : "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "CausoMuerteAccidente" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CausoMuerteAccidente",
+                  "type" : "boolean",
+                  "nullable" : "true"
+                },
+                "Accidente" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente",
+                  "type" : "object",
+                  "properties" : {
+                    "CodigoCiudad" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/CodigoCiudad",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "CodigoDepartamento" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/CodigoDepartamento",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "DescripcionDetallada" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/DescripcionDetallada",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "DescripcionLaborNoHabitual" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/DescripcionLaborNoHabitual",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "HoraAccidente" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/HoraAccidente",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "HoraAccidenteTransito" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/HoraAccidenteTransito",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "IndicadorLabor" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/IndicadorLabor",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "Jornada" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/Jornada",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "LaborNoHabitual" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/LaborNoHabitual",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "LugarAccidente" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/LugarAccidente",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "LugarAccidenteTransito" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/LugarAccidenteTransito",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "LugarHaciaDondeDirigia" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/LugarHaciaDondeDirigia",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "LugarHaciaDondeDirigiaEsSitioTrabajo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/LugarHaciaDondeDirigiaEsSitioTrabajo",
+                      "type" : "boolean",
+                      "nullable" : "true"
+                    },
+                    "Mecanismo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/Mecanismo",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "OtroMecanismo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/OtroMecanismo",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "OtroSitio" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/OtroSitio",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "OtroTipoLesion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/OtroTipoLesion",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "ParteCuerpo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/ParteCuerpo",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "Regional" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/Regional",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "Sitio" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/Sitio",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "TipoAccidente" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/TipoAccidente",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "TipoLesion" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/TipoLesion",
+                      "type" : "number",
+                      "nullable" : "true"
+                    },
+                    "TotalTiempoPrevioAntesAccidente" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/TotalTiempoPrevioAntesAccidente",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "ZonaAccidente" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Accidente/ZonaAccidente",
+                      "type" : "string",
+                      "nullable" : "true"
+                    }
+                  }
+                },
+                "DescripcionDetallada" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/DescripcionDetallada",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "Recreativo" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Recreativo",
+                  "type" : "object",
+                  "properties" : {
+                    "AutorizaEmpresaTemporal" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Recreativo/AutorizaEmpresaTemporal",
+                      "type" : "boolean",
+                      "nullable" : "true"
+                    },
+                    "DescripcionDetallada" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Recreativo/DescripcionDetallada",
+                      "type" : "string",
+                      "nullable" : "true"
+                    },
+                    "EmpresaAutorizoEventoRecreativo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Recreativo/EmpresaAutorizoEventoRecreativo",
+                      "type" : "boolean",
+                      "nullable" : "true"
+                    },
+                    "EmpresaOrganizaEventoRecreativo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Recreativo/EmpresaOrganizaEventoRecreativo",
+                      "type" : "boolean",
+                      "nullable" : "true"
+                    },
+                    "OrdenEmpresaRecreativo" : {
+                      "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Recreativo/OrdenEmpresaRecreativo",
+                      "type" : "boolean",
+                      "nullable" : "true"
+                    }
+                  }
+                },
+                "EmpresaAutorizoEvento" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/EmpresaAutorizoEvento",
+                  "type" : "boolean",
+                  "nullable" : "true"
+                },
+                "EmpresaOrganizaEvento" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/EmpresaOrganizaEvento",
+                  "type" : "boolean",
+                  "nullable" : "true"
+                },
+                "EsAutorizado" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/EsAutorizado",
+                  "type" : "boolean",
+                  "nullable" : "true"
+                },
+                "EstadoSiniestro" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/EstadoSiniestro",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "FechaAccidente" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/FechaAccidente",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "FechaRecepcion" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/FechaRecepcion",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "HorarioTrabajoAsignado" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/HorarioTrabajoAsignado",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "InformacionAdicional" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/InformacionAdicional",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "InformacionAdicionalDeportivo" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/InformacionAdicionalDeportivo",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "LaborHabitual" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/LaborHabitual",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "NumeroAfiliacion" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/NumeroAfiliacion",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "NumeroContrato" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/NumeroContrato",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "Secuencia" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/Secuencia",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "TipoPrestacion" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/TipoPrestacion",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "TipoReporte" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/TipoReporte",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "TorneoExterno" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/TorneoExterno",
+                  "type" : "boolean",
+                  "nullable" : "true"
+                },
+                "UsuarioRegistro" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/UsuarioRegistro",
+                  "type" : "string",
+                  "nullable" : "true"
+                },
+                "ModalidadTrabajo" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/ModalidadTrabajo",
+                  "type" : "number",
+                  "nullable" : "true"
+                },
+                "CaidaAlturas" : {
+                  "id" : "http://wso2jsonschema.org/body/Lista/Siniestro/CaidaAlturas",
+                  "type" : "string",
+                  "nullable" : "true"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

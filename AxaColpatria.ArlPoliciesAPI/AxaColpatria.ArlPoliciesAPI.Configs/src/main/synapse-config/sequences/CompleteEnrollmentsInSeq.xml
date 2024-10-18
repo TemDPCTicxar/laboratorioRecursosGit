@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="CompleteEnrollmentsInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full" separator="[**IN SEQ CompleteEnrollmentsCompleteEnrollments **]"/>
+    <call>
+        <endpoint key="CompleteEnrollmentsEndpoint"/>
+    </call>
+    <respond/>
+</sequence>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ConsultsSATCompanyAffiliationInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property expression="get-property('query.param.fechainicio')" name="startdate"/>
+        <property expression="get-property('query.param.fechafin')" name="enddate"/>
+    </log>
+    <propertyGroup>
+        <property expression="get-property('query.param.fechainicio')" name="uri.var.startdate" scope="default" type="STRING"/>
+        <property expression="get-property('query.param.fechafin')" name="uri.var.enddate" scope="default" type="STRING"/>
+    </propertyGroup>
+    <call>
+        <endpoint key="ConsultsSATCompanyAffiliationEndpoint"/>
+    </call>
+    <log level="full" separator="[***Despues del call***]"/>
+    <respond/>
+</sequence>

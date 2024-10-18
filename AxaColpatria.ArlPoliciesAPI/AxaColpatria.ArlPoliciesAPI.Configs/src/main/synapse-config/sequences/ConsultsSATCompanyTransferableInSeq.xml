@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ConsultsSATCompanyTransferableInSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full" separator="[***Inicio***]"/>
+    <call>
+        <endpoint key="ConsultsSATCompanyTransferableEndpoint"/>
+    </call>
+    <log level="full" separator="[***Despues del call***]"/>
+    <respond/>
+</sequence>
