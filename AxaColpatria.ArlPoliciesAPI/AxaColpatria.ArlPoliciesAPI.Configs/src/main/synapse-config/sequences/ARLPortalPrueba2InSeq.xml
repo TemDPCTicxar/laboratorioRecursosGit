@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ARLPortalPrueba2InSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log/>
+    <payloadFactory media-type="json">
+        <format>{&#xd;
+  "prueba": "prueba"&#xd;
+}</format>
+        <args/>
+    </payloadFactory>
+    <respond/>
+</sequence>
