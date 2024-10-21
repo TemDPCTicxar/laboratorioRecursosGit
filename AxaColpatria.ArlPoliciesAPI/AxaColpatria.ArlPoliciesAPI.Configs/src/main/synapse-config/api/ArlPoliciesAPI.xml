@@ -92,4 +92,7 @@
     <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalNoveltyRegisterInSeq" methods="PATCH" uri-template="/enrollment/{affiliation}/employees/novelties">
         <outSequence/>
     </resource>
+    <resource faultSequence="ArlPoliciesAPIFaultSequence" inSequence="ARLPortalPrueba2InSeq" methods="POST" uri-template="/prueba2">
+        <outSequence/>
+    </resource>
 </api>
