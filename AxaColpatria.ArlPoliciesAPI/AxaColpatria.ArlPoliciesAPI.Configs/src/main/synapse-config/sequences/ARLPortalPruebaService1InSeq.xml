@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ARLPortalPruebaService1InSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full"/>
+    <payloadFactory media-type="json">
+        <format>{ "patient": { "name": "John Doe", "dob": "1940-03-19", "ssn": "234-23-525", "address": "California", "phone": "8770586755", "email": "johndoe@gmail.com" }, "doctor": "thomas collins", "hospital_id": "grandoaks", "hospital": "grand oak community hospital", "appointment_date": "2025-04-02" }</format>
+        <args/>
+    </payloadFactory>
+    <respond/>
+</sequence>
